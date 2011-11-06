@@ -11,17 +11,20 @@ h1. Themes Documentation
 
 This documentation is for creating custom themes in PortfolioDeck.
 
-Don't hesitate to drop us a line if you got any questions or comments. 
-Send an email to <a href="mailto:hello@portfoliodeck.com">hello@portfoliodeck.com</a>
+Don't hesitate to drop us a line if you got any questions or comments. Send an email to <a href="mailto:hello@portfoliodeck.com">hello@portfoliodeck.com</a>
+
+
+
+
 
 h2. Contents
 
-*<a href="#intro">Introduction</a>
-*<a href="#templates">Templates and assets</a>
-*<a href="#global">Global objects</a>
-*<a href="#template_objects">Template specific objects</a>
-*<a href="#filters">Filters</a>
-*<a href="#sizes">Image sizes</a>
+* "Introduction":#intro
+* "Templates and assets":#templates
+* "Global objects":#global
+* "Template specific objects":#template_objects
+* "Filters":#filters
+* "Image sizes":#sizes
 
 
 
@@ -30,37 +33,44 @@ h2. Contents
 
 h2(#intro). Introduction
 
-<p>We use <a href="http://www.liquidmarkup.org/">Liquid</a> as our templating language. If you ever have designed themes in <a href="http://www.shopify.com/?ref=winston">Shopify</a> you've used it. If you're new to Liquid, please take a couple of minutes to read through <a href="http://wiki.github.com/tobi/liquid/liquid-for-designers">Liquid for designers</a>. Don't worry, we'll wait. Done? Good, let's proceed.</p>
-<h2 id="templates">Templates and assets</h2>
-<p>A theme consists of six template files and accompanying assets (stylesheets, javascripts and graphics). There is a template for each page type. There is also a layout template for the framework of the site (header, navigation and footer). Each page template is rendered inside the layout template.</p>
-<ul>
-	<li><a href="#layout_template">layout.liquid</a></li>
-	<li><a href="#index_template">index.liquid</a></li>
-	<li><a href="#collecion_template">collection.liquid</a></li>
-	<li><a href="#set_template">set.liquid</a></li>
-	<li><a href="#item_template">item.liquid</a></li>
-	<li><a href="#page_template">page.liquid</a></li>
-</ul>
+We use "Liquid":http://www.liquidmarkup.org/ as our templating language. If you ever have designed themes in "Shopify":http://www.shopify.com/?ref=winston you've used it. If you're new to Liquid, please take a couple of minutes to read through "Liquid for designers":http://wiki.github.com/tobi/liquid/liquid-for-designers. Don't worry, we'll wait. Done? Good, let's proceed.
 
-<h3 id="layout_template">layout.liquid</h3>
-<p>The layout template is used to set the framework for the site. This is were you'll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags.</p>
-<h4>Available objects</h4>
-<ul>
-	<li><a href="#global">Global objects</a></li>
-</ul>
-<h3 id="index_template">index.liquid</h3>
-<p>The index template is your sites front-page.</p>
-<h4>Available objects</h4>
-<ul>
-	<li><a href="#global">Global objects</a></li>
-</ul>
-<h3 id="collection_template">collection.liquid</h3>
-<p>This template renders a collections page. The main purpose of this page would most likely be to show the sets in a collection.</p>
-<h4>Available objects</h4>
-<ul>
-	<li><a href="#global">Global objects</a></li>
-	<li><a href="#collection_object">collection</a></li>
-</ul>
+h2(#templates). Templates and assets
+
+A theme consists of six template files and accompanying assets (stylesheets, javascripts and graphics). There is a template for each page type. There is also a layout template for the framework of the site (header, navigation and footer). Each page template is rendered inside the layout template.
+
+* <a href="#layout_template">layout.liquid</a>
+* <a href="#index_template">index.liquid</a>
+* <a href="#collecion_template">collection.liquid</a>
+* <a href="#set_template">set.liquid</a>
+* <a href="#item_template">item.liquid</a>
+* <a href="#page_template">page.liquid</a>
+
+h3(#layout_template). layout.liquid
+
+The layout template is used to set the framework for the site. This is were you'll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags.
+
+h4. Available objects
+
+* <a href="#global">Global objects</a>
+
+h3(#index_template). index.liquid
+
+The index template is your sites front-page.
+
+h4. Available objects
+
+* <a href="#global">Global objects</a>
+
+h3(#collection_template).collection.liquid
+
+This template renders a collections page. The main purpose of this page would most likely be to show the sets in a collection.
+
+h4. Available objects
+
+* <a href="#global">Global objects</a>
+* <a href="#collection_object">collection</a>
+
 <h3 id="set_template">set.liquid</h3>
 <p>This template renders a set page. On this page you can, for example, show the first item in the set or an overview of all items in the set.</p>
 <h4>Available objects</h4>
