@@ -5,7 +5,7 @@ body {
   padding:0;
   font:normal 16px/1.5em georgia, serif;
   color:#333;
-  background:#e6e3dc; }
+  background:#ddd url(../graphics/bg.jpg); }
 h1, h2, h3, h4, h5, h6 {
   color:#000;
   font-family:"helvetica neue", helvetica, arial, sans-serif; }

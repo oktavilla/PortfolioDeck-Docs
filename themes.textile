@@ -3,6 +3,10 @@ layout: doc
 title: Themes Documentation
 ---
 
+
+
+
+
 h1. Themes Documentation
 
 This documentation is for creating custom themes in PortfolioDeck.
@@ -12,15 +16,20 @@ Send an email to <a href="mailto:hello@portfoliodeck.com">hello@portfoliodeck.co
 
 h2. Contents
 
-<ul>
-	<li><a href="#intro">Introduction</a></li>
-	<li><a href="#templates">Templates and assets</a></li>
-	<li><a href="#global">Global objects</a></li>
-	<li><a href="#template_objects">Template specific objects</a></li>
-	<li><a href="#filters">Filters</a></li>
-	<li><a href="#sizes">Image sizes</a></li>
-</ul>
-<h2 id="intro">Introduction</h2>
+*<a href="#intro">Introduction</a>
+*<a href="#templates">Templates and assets</a>
+*<a href="#global">Global objects</a>
+*<a href="#template_objects">Template specific objects</a>
+*<a href="#filters">Filters</a>
+*<a href="#sizes">Image sizes</a>
+
+
+
+
+
+
+h2(#intro). Introduction
+
 <p>We use <a href="http://www.liquidmarkup.org/">Liquid</a> as our templating language. If you ever have designed themes in <a href="http://www.shopify.com/?ref=winston">Shopify</a> you've used it. If you're new to Liquid, please take a couple of minutes to read through <a href="http://wiki.github.com/tobi/liquid/liquid-for-designers">Liquid for designers</a>. Don't worry, we'll wait. Done? Good, let's proceed.</p>
 <h2 id="templates">Templates and assets</h2>
 <p>A theme consists of six template files and accompanying assets (stylesheets, javascripts and graphics). There is a template for each page type. There is also a layout template for the framework of the site (header, navigation and footer). Each page template is rendered inside the layout template.</p>
@@ -32,6 +41,7 @@ h2. Contents
 	<li><a href="#item_template">item.liquid</a></li>
 	<li><a href="#page_template">page.liquid</a></li>
 </ul>
+
 <h3 id="layout_template">layout.liquid</h3>
 <p>The layout template is used to set the framework for the site. This is were you'll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags.</p>
 <h4>Available objects</h4>
@@ -72,7 +82,14 @@ h2. Contents
 	<li><a href="#global">Global objects</a></li>
 	<li><a href="#page_object">page</a></li>
 </ul>
-<h2 id="global">Global objects</h2>
+
+
+
+
+
+
+h2(#global). Global objects
+
 <p>These objects are available in all template files.</p>
 <ul>
 	<li>collections</li>
@@ -186,7 +203,14 @@ h2. Contents
 	<li><code>page.title</code> <br>Returns a string with the page title.</li>
 	<li><code>page.body</code> <br>Returns a string with the pages body content.</li>
 </ul>
-<h2 id="filters">Filters</h2>
+
+
+
+
+
+
+h2(#filters). Filters
+
 <p>This is the filters we have set up specifically for PortfolioDeck. Liquid also has its own <a href="http://wiki.github.com/tobi/liquid/liquid-for-designers">standard filters</a> .</p>
 <ul>
 	<li><code>path</code></li>
