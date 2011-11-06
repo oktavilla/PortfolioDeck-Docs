@@ -3,10 +3,15 @@ layout: doc
 title: Themes Documentation
 ---
 
-<h1>Themes Documentation</h1>
-<p>This documentation is for creating custom themes in PortfolioDeck.</p>
-<p>Don't hesitate to drop us a line if you got any questions or comments. Send an email to <a href="mailto:hello@portfoliodeck.com">hello@portfoliodeck.com</a></p>
-<h2>Contents</h2>
+h1. Themes Documentation
+
+This documentation is for creating custom themes in PortfolioDeck.
+
+Don't hesitate to drop us a line if you got any questions or comments. 
+Send an email to <a href="mailto:hello@portfoliodeck.com">hello@portfoliodeck.com</a>
+
+h2. Contents
+
 <ul>
 	<li><a href="#intro">Introduction</a></li>
 	<li><a href="#templates">Templates and assets</a></li>
