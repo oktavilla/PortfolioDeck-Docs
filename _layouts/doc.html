@@ -1,1 +1,40 @@
-{{ content }}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>PortfolioDeck.com</title>
+  <link rel="stylesheet" href="stylesheets/screen.css">
+</head>
+<body>
+  <div id="wrap">
+    <div id="header"><div class="inner">
+      <a href="/" id="logo"><img src="/graphics/logo.png" width="110" height="87" alt="PortfolioDeck"></a>
+    </div></div>
+    <div id="content"><div class="inner">
+      <div class="block">
+        {{ content }}
+      </div>
+    </div>
+    <div id="footer"><div class="inner">
+      <div class="block">
+        <p>
+          <strong>Got any questions?</strong> Send us an email at <a href="mailto:hello@portfoliodeck.com">hello@portfoliodeck.com</a>.<br> 
+          Or stay in the loop through <a href="http://twitter.com/portfoliodeck">Twitter</a>.
+          </p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-6940529-1");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
+</body>
+</html>

@@ -2,4 +2,218 @@
 layout: doc
 title: Themes Documentation
 ---
-Here's some documentation
+
+<h1>Themes Documentation</h1>
+<p>This documentation is for creating custom themes in PortfolioDeck.</p>
+<p>Don't hesitate to drop us a line if you got any questions or comments. Send an email to <a href="mailto:hello@portfoliodeck.com">hello@portfoliodeck.com</a></p>
+<h2>Contents</h2>
+<ul>
+	<li><a href="#intro">Introduction</a></li>
+	<li><a href="#templates">Templates and assets</a></li>
+	<li><a href="#global">Global objects</a></li>
+	<li><a href="#template_objects">Template specific objects</a></li>
+	<li><a href="#filters">Filters</a></li>
+	<li><a href="#sizes">Image sizes</a></li>
+</ul>
+<h2 id="intro">Introduction</h2>
+<p>We use <a href="http://www.liquidmarkup.org/">Liquid</a> as our templating language. If you ever have designed themes in <a href="http://www.shopify.com/?ref=winston">Shopify</a> you've used it. If you're new to Liquid, please take a couple of minutes to read through <a href="http://wiki.github.com/tobi/liquid/liquid-for-designers">Liquid for designers</a>. Don't worry, we'll wait. Done? Good, let's proceed.</p>
+<h2 id="templates">Templates and assets</h2>
+<p>A theme consists of six template files and accompanying assets (stylesheets, javascripts and graphics). There is a template for each page type. There is also a layout template for the framework of the site (header, navigation and footer). Each page template is rendered inside the layout template.</p>
+<ul>
+	<li><a href="#layout_template">layout.liquid</a></li>
+	<li><a href="#index_template">index.liquid</a></li>
+	<li><a href="#collecion_template">collection.liquid</a></li>
+	<li><a href="#set_template">set.liquid</a></li>
+	<li><a href="#item_template">item.liquid</a></li>
+	<li><a href="#page_template">page.liquid</a></li>
+</ul>
+<h3 id="layout_template">layout.liquid</h3>
+<p>The layout template is used to set the framework for the site. This is were you'll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags.</p>
+<h4>Available objects</h4>
+<ul>
+	<li><a href="#global">Global objects</a></li>
+</ul>
+<h3 id="index_template">index.liquid</h3>
+<p>The index template is your sites front-page.</p>
+<h4>Available objects</h4>
+<ul>
+	<li><a href="#global">Global objects</a></li>
+</ul>
+<h3 id="collection_template">collection.liquid</h3>
+<p>This template renders a collections page. The main purpose of this page would most likely be to show the sets in a collection.</p>
+<h4>Available objects</h4>
+<ul>
+	<li><a href="#global">Global objects</a></li>
+	<li><a href="#collection_object">collection</a></li>
+</ul>
+<h3 id="set_template">set.liquid</h3>
+<p>This template renders a set page. On this page you can, for example, show the first item in the set or an overview of all items in the set.</p>
+<h4>Available objects</h4>
+<ul>
+	<li><a href="#global">Global objects</a></li>
+	<li><a href="#set_object">set</a></li>
+</ul>
+<h3 id="item_template">item.liquid</h3>
+<p>This template renders an item page. An item is an image (soon we we'll also support movies) that you have uploaded and placed in a set. On this page you might want to render the image in your preferred size and display title and description.</p>
+<h4>Available objects</h4>
+<ul>
+	<li><a href="#global">Global objects</a></li>
+	<li><a href="#item_object">item</a></li>
+</ul>
+<h3 id="page_template">page.liquid</h3>
+<p>The template renders one of your static pages.</p>
+<h4>Available objects</h4>
+<ul>
+	<li><a href="#global">Global objects</a></li>
+	<li><a href="#page_object">page</a></li>
+</ul>
+<h2 id="global">Global objects</h2>
+<p>These objects are available in all template files.</p>
+<ul>
+	<li>collections</li>
+	<li>sets</li>
+	<li>link_lists</li>
+	<li>page_title</li>
+</ul>
+<h3>Collections</h3>
+<p>The <code>collections</code> object is available in all templates. It contains a list of all collections in the portfolio.</p>
+<p>You can also retrieve a specific collection with its <code>handle</code> e.g. <code>collections.main</code>, where <code>main</code> is the handle, will return the <code>collection</code> with the handle <code>main</code>.</p>
+<p><a href="#collection_object">Check out the docs for the collection object</a></p>
+<h4>Example</h4>
+<p>For example, if you want to create a list of links to all your collections this is how you would do it.</p>
+<pre>{% if collections != empty %}
+  &lt;ul&gt;
+  {% for _collection in collections %}
+    &lt;li&gt;&lt;a href="{{ _collection | path }}"&gt;{{ _collection.title }}&lt;/a&gt;&lt;/li&gt;
+  {% endfor %}
+  &lt;/ul&gt;
+{% endif %}</pre>
+<h3>Sets</h3>
+<p>The <code>sets</code> object is available in all templates. It contains a list of all sets in the portfolio.</p>
+<p>You can also retrieve a specific <code>set</code> with its <code>handle</code> e.g. <code>sets.main</code>, where <code>main</code> is the handle, will return the <code>set</code> with the handle <code>main</code>.</p>
+<p><a href="#set_object">Check out the docs for the set object</a></p>
+<h4>Example</h4>
+<p>For example, if you wanted to create a list of links to all your sets this is how you would do it.</p>
+<pre>{% if sets != empty %}
+  &lt;ul&gt;
+  {% for _set in sets %}
+    &lt;li&gt;&lt;a href="{{ _set | path }}"&gt;{{ _set.title }}&lt;/a&gt;&lt;/li&gt;
+  {% endfor %}
+  &lt;/ul&gt;
+{% endif %}</pre>
+<h3>Pages</h3>
+<p>The <code>pages</code> object is available in all templates. It contains a list of all pages in the portfolio.</p>
+<p>You can also retrieve a specific <code>page</code> with its <code>handle</code> e.g. <code>pages.main</code>, where <code>main</code> is the handle, will return the <code>page</code> with the handle <code>main</code>.</p>
+<p><a href="#page_object">Check out the docs for the page object</a></p>
+<h4>Example</h4>
+<p>For example, if you wanted to create a list of links to all your pages this is how you would do it.</p>
+<pre>{% if pages != empty %}
+  &lt;ul&gt;
+  {% for _page in pages %}
+    &lt;li&gt;&lt;a href="{{ _page | path }}"&gt;{{ _page.title }}&lt;/a&gt;&lt;/li&gt;
+  {% endfor %}
+  &lt;/ul&gt;
+{% endif %}</pre>
+<h3 id="link_lists_object">link_lists</h3>
+<p>The <code>link_lists</code> object is a global array of all your link lists. To retrieve a <code>link_list</code> object you need to supply its <code>handle</code>. E.g. <code>link_lists.main</code> where <code>main</code> is the handle, will return the <code>link_list</code> with the handle <code>main</code>.</p>
+<ul>
+	<li><code>link_lists.example_handle</code> <br>Returns the <code>link_list</code> with the handle <code>example_handle</code>.</li>
+	<li><code>link_lists.example_handle.links</code> <br>Returns an array of <code>links</code>.</li>
+	<li><code>link_lists.example_handle.title</code> <br>Returns the title of the <code>link_list</code>.</li>
+</ul>
+<h3 id="link_objetc">link</h3>
+<p>Each <code>link</code> in an link_list object has:</p>
+<ul>
+	<li><code>link.current</code> <br>Returns <span class="caps">TRUE</span> if you are on the page where that link points.</li>
+	<li><code>link.title</code> <br>Returns a string with the links title.</li>
+</ul>
+<h4>Example</h4>
+<pre>&lt;ul id="nav"&gt;
+  {% for _link in link_lists.main.links %}
+    &lt;li{% if _link.current %} class="current"{% endif %}&gt;&lt;a href="{{ _link | path }}"&gt;{{ link.title }}&lt;/a&gt;&lt;/li&gt;
+  {% endfor %} 
+&lt;/ul&gt;</pre>
+<h3>page_title</h3>
+<p>Returns a string with the title of the current page. If the current page is a <code>set</code> it returns the <code>set.title</code> and so on for <code>page</code>, <code>collection</code> and <code>item</code>.</p>
+<h2 id="template_objects">Template specific objects</h2>
+<ul>
+	<li>collection</li>
+	<li>set</li>
+	<li>item</li>
+	<li>page</li>
+</ul>
+<h3 id="collection_object">collection</h3>
+<p>The current collection is retrieved with <code>collection</code>. It is available in the <code>collection.liquid</code> template. These variables are available on the collection object:</p>
+<ul>
+	<li><code>collection.title</code> <br>Returns a string with the collections title.</li>
+	<li><code>collection.description</code> <br>Returns a string with the collections description.</li>
+	<li><code>collection.uri</code> <br>Returns a string with the <span class="caps">URI</span> for the collection.</li>
+	<li><code>collection.sets</code> <br>Returns an array with the sets in the collection.</li>
+</ul>
+<h3 id="collection_set">set</h3>
+<p>The current set is retrieved with <code>set</code>. It is available in the <code>set.liquid</code> template.</p>
+<p>These are the available variables on the set object:</p>
+<ul>
+	<li><code>set.title</code> <br>Returns a string with the sets title.</li>
+	<li><code>set.description</code> <br>Returns a string with the sets description.</li>
+	<li><code>set.cover</code> <br>Returns a object with the sets cover image.</li>
+	<li><code>set.items</code> <br>Returns an array with the items in the set.</li>
+</ul>
+<h3 id="item_object">item</h3>
+<p>The current item is retrieved with <code>item</code>. It is available in the <code>item.liquid</code> template.</p>
+<p>These variables are available on the item object:</p>
+<ul>
+	<li><code>item.title</code> <br>Returns a string with the items title.</li>
+	<li><code>item.description</code> <br>Returns a string with the items description.</li>
+	<li><code>item.width</code> <br>Returns an integer with the width of the original.</li>
+	<li><code>item.height</code> <br>Returns an integer with the height of the original.</li>
+	<li><code>item.landscape</code> <br>Returns <span class="caps">TRUE</span> if width &gt; height.</li>
+	<li><code>item.portrait</code> <br>Returns <span class="caps">TRUE</span> if width &lt; height.</li>
+	<li><code>item.next_item</code> <br>Returns an object with the next item in the set.</li>
+	<li><code>item.previous_item</code> <br>Returns an object with the previous item in the set.</li>
+	<li><code>item.set</code> <br>Returns an object with the set the item belongs.</li>
+	<li><code>item.position</code><br>Returns an integer with the <code>items</code> position in relation to the other items in the set.</li>
+</ul>
+<h3 id="page_object">page</h3>
+<p>The current page is retrieved with <code>page</code>. It is available in the <code>page.liquid</code>.</p>
+<p>These are the available objects:</p>
+<ul>
+	<li><code>page.title</code> <br>Returns a string with the page title.</li>
+	<li><code>page.body</code> <br>Returns a string with the pages body content.</li>
+</ul>
+<h2 id="filters">Filters</h2>
+<p>This is the filters we have set up specifically for PortfolioDeck. Liquid also has its own <a href="http://wiki.github.com/tobi/liquid/liquid-for-designers">standard filters</a> .</p>
+<ul>
+	<li><code>path</code></li>
+	<li><code>path_with_collection</code></li>
+	<li><code>asset_tag</code></li>
+</ul>
+<h3>path</h3>
+<p>The <code>path</code> filter is used to get the address for a <code>collection</code>, <code>set</code>, <code>item</code> or <code>page</code>.</p>
+<h4>Examples</h4>
+<pre>&lt;a href="{{ collection | path }}"&gt;{{ collection.title }}&lt;/a&gt;</pre>
+<p>This would result in:</p>
+<pre>&lt;a href="/collection/the-title"&gt;The Title&lt;/a&gt;</pre>
+<h3>path_with_collection</h3>
+<p>The <code> path_with_collection </code> filter is used to get the address for a <code>set</code> or <code>item</code> with the parent <code>collection</code> added to the address.</p>
+<h4>Examples</h4>
+<pre>&lt;a href="{{ set | path_with_collection: collection }}"&gt;{{ set.title }}&lt;/a&gt;</pre>
+<p>This would result in:</p>
+<pre>&lt;a href="/collection/collection-title/set/set-title"&gt;The Title&lt;/a&gt;</pre>
+<h3>asset_tag</h3>
+<p>The <code>asset_tag</code> is used to get the <span class="caps">HTML</span> for an item.</p>
+<h4>Examples</h4>
+<pre>{{ item | asset_tag: '685' }}</pre>
+<p>If the item is an image this would result in:</p>
+<pre>&lt;img src="/images/YOUR_ACCOUNT_NAME/685/item_filename.jpg?token=RESIZE_TOKEN" alt="Item Title" width="685" height="400"&gt;</pre>
+<h2 id="sizes">Image sizes</h2>
+<p>As you see in the example above we supply '685' to the asset tag. This is the size the asset will be displayed in. There are a couple of different ways to get the desired size.</p>
+<ul>
+	<li><code>685</code> <br>Renders the image within a 685px square. If the image is in landscape format it will be 685px wide. An image in portrait format will be 685px high.</li>
+	<li><code>685x500</code> <br>Renders the image within a rectangle with a width of 685px and a height of 500px.</li>
+	<li><code>w685</code> <br>Renders the image with a width of 685px.</li>
+	<li><code>h685</code> <br>Renders the image with a height of 685px.</li>
+	<li><code>c200x250</code> <br>Renders the image cropped to 200px width and 250px height.</li>
+</ul>
+<h3>Examples</h3>
+<pre>{{ item | asset_tag: 'w685' }}</pre>
