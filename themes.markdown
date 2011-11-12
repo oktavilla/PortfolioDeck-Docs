@@ -124,13 +124,13 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
 {% highlight html %}
-{% if collections != empty %}
+&#123;% if collections != empty %}
   <ul>
-  {% for _collection in collections %}
+  &#123;% for _collection in collections %}
     <li><a href="{{ _collection | path }}">{{ _collection.title }}</a></li>
-  {% endfor %}
+  &#123;% endfor %}
   </ul>
-{% endif %}
+&#123;% endif %}
 {% endhighlight %}
 
 ### Sets
@@ -145,13 +145,13 @@ You can also retrieve a specific `set` with its `handle` e.g. `sets.main`, where
 
 For example, if you wanted to create a list of links to all your sets this is how you would do it.
 
-    {% if sets != empty %}
+    &#123;% if sets != empty %}
       <ul>
-      {% for _set in sets %}
+      &#123;% for _set in sets %}
         <li><a href="{{ _set | path }}">{{ _set.title }}</a></li>
-      {% endfor %}
+      &#123;% endfor %}
       </ul>
-    {% endif %}
+    &#123;% endif %}
 
 ### Pages
 
@@ -165,13 +165,13 @@ You can also retrieve a specific `page` with its `handle` e.g. `pages.main`, whe
 
 For example, if you wanted to create a list of links to all your pages this is how you would do it.
 
-    {% if pages != empty %}
+    &#123;% if pages != empty %}
       <ul>
-      {% for _page in pages %}
+      &#123;% for _page in pages %}
         <li><a href="{{ _page | path }}">{{ _page.title }}</a></li>
-      {% endfor %}
+      &#123;% endfor %}
       </ul>
-    {% endif %}
+    &#123;% endif %}
 
 ### link_lists ### {#link_lists_object}
 
@@ -191,9 +191,9 @@ Each `link` in an link_list object has:
 #### Example
 
     <ul id="nav">
-      {% for _link in link_lists.main.links %}
-        <li{% if _link.current %} class="current"{% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
-      {% endfor %} 
+      &#123;% for _link in link_lists.main.links %}
+        <li&#123;% if _link.current %} class="current"&#123;% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
+      &#123;% endfor %} 
     </ul>
 
 ### page_title
