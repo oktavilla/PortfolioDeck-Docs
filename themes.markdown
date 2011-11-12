@@ -123,7 +123,6 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
-```ruby
 {{ '%' | prepend:'{' }} if collections != empty %}
   <ul>
   {{ '%' | prepend:'{' }} for _collection in collections %}
@@ -131,7 +130,6 @@ For example, if you want to create a list of links to all your collections this 
   {{ '%' | prepend:'{' }} endfor %}
   </ul>
 {{ '%' | prepend:'{' }} endif %}
-```
 
 ### Sets
 
