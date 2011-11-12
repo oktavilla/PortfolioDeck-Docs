@@ -17,40 +17,40 @@ This documentation is for creating custom themes in PortfolioDeck. Don't hesitat
 
 ## Contents
 
-* [Introduction][intro]
-* [Templates and assets][templates]
-* [Global objects][global]
-* [Template specific objects][template_objects]
-* [Filters][filters]
-* [Image sizes][sizes]
+* [Introduction](#intro)
+* [Templates and assets](#templates)
+* [Global objects](#global)
+* [Template specific objects](#template_objects)
+* [Filters](#filters)
+* [Image sizes](#sizes)
 
 
 
 
 
 
-[intro]: ## Introduction
+## Introduction ## {#intro}
 
 We use [Liquid](http://www.liquidmarkup.org/) as our templating language. If you ever have designed themes in [Shopify](http://www.shopify.com/?ref=winston) you've used it. If you're new to Liquid, please take a couple of minutes to read through [Liquid for designers](http://wiki.github.com/tobi/liquid/liquid-for-designers). Don't worry, we'l[wait. Done? Good, let's proceed.
 
-[templates]: ## Templates and assets
+## Templates and assets ## {#templates}
 
 A theme consists of six template files and accompanying assets (stylesheets, javascripts and graphics). There is a template for each page type. There is also a layout template for the framework of the site (header, navigation and footer). Each page template is rendered inside the [yout template.
 
-* [layout.liquid][[ayout_template]
-* [index.liquid][index_template]
-* [collection.liquid][collection_template]
-* [set.liquid][set_template]
-* [item.liquid][item_template]
-* [p[e.liquid][page_template]
+* [layout.liquid](#layout_template)
+* [index.liquid](#index_template)
+* [collection.liquid](#collection_template)
+* [set.liquid](#set_template)
+* [item.liquid](#item_template)
+* [page.liquid](#page_template)
 
 [layout_template]: ### layout.liquid
 
 The layout template is used to set the framework for the site. This is were you'll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags.
 
-#### Availableobjects
+#### Available objects
 
-* [global objects][global]
+* [global objects](#global)
 
 [index_template]: ### index.liquid
 
@@ -58,7 +58,7 @@ The index template is your sites front-page.
 
 #### Available objects
 
-* [Global objects][global]
+* [Global objects](#global)
 
 [collection_template]: ### collection.liquid
 
@@ -66,8 +66,8 @@ This template renders a collections page. The main purpose of this page would mo
 
 #### Available objects
 
-* [Global objects][global]
-* [Collection][collection_object]
+* [Global objects](#global)
+* [Collection](#collection_object)
 
 [set_template]: ### set.liquid
 
@@ -75,8 +75,8 @@ This template renders a set page. On this page you can, for example, show the fi
 
 #### Available objects
 
-* [Global objects][global]
-* [Set][set_object]
+* [Global objects](#global)
+* [Set](#set_object)
 
 [item_template]: ### item.liquid
 
@@ -85,7 +85,7 @@ This template renders an item page. An item is an image (soon we we'll also supp
 #### Available objects
 
 * [Global objects[global]
-* [Item][item_object]
+* [Item](#item_object)
 
 [page_template]: ### page.liquid
 
@@ -93,8 +93,8 @@ The template renders one of your static pages.
 
 #### Available objects
 
-* [Global objects][global]
-* [Page][page_object]
+* [Global objects](#global)
+* [Page](#page_object)
 
 
 
@@ -102,7 +102,7 @@ The template renders one of your static pages.
 
 
 
-[global]: ## Global objects
+## Global objects ## {#global}
 
 These objects are available in all template files.
 
@@ -117,7 +117,7 @@ The 'collections' object is available in all templates. It contains a list of al
 
 You can also retrieve a specific collection with its 'handle' e.g. 'collections.main', where <code>main</code> is the handle, will return the <code>collection</code> with the handle <code>main</code>.
 
-[Check out the docs for the collection object][collection_object]
+[Check out the docs for the collection object](#collection_object)
 
 #### Example
 
@@ -137,7 +137,7 @@ The <code>sets</code> object is available in all templates. It contains a list o
 
 You can also retrieve a specific <code>set</code> with its <code>handle</code> e.g. <code>sets.main</code>, where <code>main</code> is the handle, will return the <code>set</code> with the handle <code>main</code>.
 
-[Check out the docs for the set object][set_object]
+[Check out the docs for the set object](#set_object)
 
 #### Example
 
@@ -157,7 +157,7 @@ The <code>pages</code> object is available in all templates. It contains a list 
 
 You can also retrieve a specific <code>page</code> with its <code>handle</code> e.g. <code>pages.main</code>, where <code>main</code> is the handle, will return the <code>page</code> with the handle <code>main</code>.
 
-[Check out the docs for the page object][page_object]
+[Check out the docs for the page object](#page_object)
 
 #### Example
 
@@ -201,7 +201,7 @@ Returns a string with the title of the current page. If the current page is a <c
 
 
 
-[template_objects]: ## Template specific objects
+## Template specific objects ## {#template_objects}
 
 * collection
 * set
@@ -257,7 +257,7 @@ These are the available objects:
 
 
 
-[[filters]: ## Filters
+## Filters ## {#filters}
 
 This is the filters we have set up specifically for PortfolioDeck. Liquid also has its own <a href="http://wiki.github.com/tobi/liquid/liquid-for-designers">standard filters</a>.
 
@@ -305,7 +305,7 @@ If the item is an image this would result in:
 
 
 
-[sizes]: ## Image sizes
+## Image sizes ## {#sizes}
 
 As you see in the example above we supply '685' to the asset tag. This is the size the asset will be displayed in. There are a couple of different ways to get the desired size.
 
