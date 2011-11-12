@@ -143,13 +143,13 @@ You can also retrieve a specific `set` with its `handle` e.g. `sets.main`, where
 
 For example, if you wanted to create a list of links to all your sets this is how you would do it.
 
-    &#123;% if sets != empty %}
-      <ul>
-      &#123;% for _set in sets %}
-        <li><a href="{{ _set | path }}">{{ _set.title }}</a></li>
-      &#123;% endfor %}
-      </ul>
-    &#123;% endif %}
+&#123;% if sets != empty %}
+  <ul>
+  &#123;% for _set in sets %}
+    <li><a href="{{ _set | path }}">{{ _set.title }}</a></li>
+  &#123;% endfor %}
+  </ul>
+&#123;% endif %}
 
 ### Pages
 
@@ -163,13 +163,13 @@ You can also retrieve a specific `page` with its `handle` e.g. `pages.main`, whe
 
 For example, if you wanted to create a list of links to all your pages this is how you would do it.
 
-    &#123;% if pages != empty %}
-      <ul>
-      &#123;% for _page in pages %}
-        <li><a href="{{ _page | path }}">{{ _page.title }}</a></li>
-      &#123;% endfor %}
-      </ul>
-    &#123;% endif %}
+&#123;% if pages != empty %}
+  <ul>
+  &#123;% for _page in pages %}
+    <li><a href="{{ _page | path }}">{{ _page.title }}</a></li>
+  &#123;% endfor %}
+  </ul>
+&#123;% endif %}
 
 ### link_lists ### {#link_lists_object}
 
@@ -188,11 +188,11 @@ Each `link` in an link_list object has:
 
 #### Example
 
-    <ul id="nav">
-      &#123;% for _link in link_lists.main.links %}
-        <li&#123;% if _link.current %} class="current"&#123;% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
-      &#123;% endfor %} 
-    </ul>
+<ul id="nav">
+  &#123;% for _link in link_lists.main.links %}
+    <li&#123;% if _link.current %} class="current"&#123;% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
+  &#123;% endfor %} 
+</ul>
 
 ### page_title
 
@@ -259,7 +259,7 @@ These are the available objects:
 
 ## Filters ## {#filters}
 
-This is the filters we have set up specifically for PortfolioDeck. Liquid also has its own <a href="http://wiki.github.com/tobi/liquid/liquid-for-designers">standard filters</a>.
+This is the filters we have set up specifically for PortfolioDeck. Liquid also has its own [standard filters](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers).
 
 * `path`
 * `path_with_collection`
@@ -271,11 +271,11 @@ The `path` filter is used to get the address for a `collection`, `set`, `item` o
 
 #### Examples
 
-    <a href="{{ collection | path }}">{{ collection.title }}</a>
+<a href="{{ collection | path }}">{{ collection.title }}</a>
 
 This would result in:
 
-    <a href="/collection/the-title">The Title</a>
+<a href="/collection/the-title">The Title</a>
 
 ### path_with_collection
 
@@ -283,11 +283,11 @@ The ` path_with_collection ` filter is used to get the address for a `set` or `i
 
 #### Examples
 
-    <a href="{{ set | path_with_collection: collection }}">{{ set.title }}</a>
+<a href="{{ set | path_with_collection: collection }}">{{ set.title }}</a>
 
 This would result in:
 
-    <a href="/collection/collection-title/set/set-title">The Title</a>
+<a href="/collection/collection-title/set/set-title">The Title</a>
 
 ### asset_tag
 
@@ -295,13 +295,11 @@ The `asset_tag` is used to get the <span class="caps">HTML</span> for an item.
 
 #### Examples
 
-    {{ item | asset_tag: `685` }}
+{{ item | asset_tag: `685` }}
 
 If the item is an image this would result in:
 
-```html
 <img src="/images/YOUR_ACCOUNT_NAME/685/item_filename.jpg?token=RESIZE_TOKEN" alt="Item Title" width="685" height="400">
-```
 
 
 
@@ -318,6 +316,4 @@ As you see in the example above we supply `685` to the asset tag. This is the si
 
 ### Examples
 
-```ruby
 {{ item | asset_tag: `w685` }}
-```
