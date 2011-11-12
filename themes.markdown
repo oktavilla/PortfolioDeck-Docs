@@ -123,13 +123,15 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
-{{ '%' | prepend:'{' }} if collections != empty %}
+{% highlight html %}
+{% if collections != empty %}
   <ul>
-  {{ '%' | prepend:'{' }} for _collection in collections %}
+  {% for _collection in collections %}
     <li><a href="{{ _collection | path }}">{{ _collection.title }}</a></li>
-  {{ '%' | prepend:'{' }} endfor %}
+  {% endfor %}
   </ul>
-{{ '%' | prepend:'{' }} endif %}
+{% endif %}
+{% endhighlight %}
 
 ### Sets
 
@@ -143,13 +145,13 @@ You can also retrieve a specific `set` with its `handle` e.g. `sets.main`, where
 
 For example, if you wanted to create a list of links to all your sets this is how you would do it.
 
-    {{ '%' | prepend:'{' }} if sets != empty %}
+    {% if sets != empty %}
       <ul>
-      {{ '%' | prepend:'{' }} for _set in sets %}
+      {% for _set in sets %}
         <li><a href="{{ _set | path }}">{{ _set.title }}</a></li>
-      {{ '%' | prepend:'{' }} endfor %}
+      {% endfor %}
       </ul>
-    {{ '%' | prepend:'{' }} endif %}
+    {% endif %}
 
 ### Pages
 
@@ -163,13 +165,13 @@ You can also retrieve a specific `page` with its `handle` e.g. `pages.main`, whe
 
 For example, if you wanted to create a list of links to all your pages this is how you would do it.
 
-    {{ '%' | prepend:'{' }} if pages != empty %}
+    {% if pages != empty %}
       <ul>
-      {{ '%' | prepend:'{' }} for _page in pages %}
+      {% for _page in pages %}
         <li><a href="{{ _page | path }}">{{ _page.title }}</a></li>
-      {{ '%' | prepend:'{' }} endfor %}
+      {% endfor %}
       </ul>
-    {{ '%' | prepend:'{' }} endif %}
+    {% endif %}
 
 ### link_lists ### {#link_lists_object}
 
@@ -189,9 +191,9 @@ Each `link` in an link_list object has:
 #### Example
 
     <ul id="nav">
-      {{ '%' | prepend:'{' }} for _link in link_lists.main.links %}
-        <li{{ '%' | prepend:'{' }} if _link.current %} class="current"{{ '%' | prepend:'{' }} endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
-      {{ '%' | prepend:'{' }} endfor %} 
+      {% for _link in link_lists.main.links %}
+        <li{% if _link.current %} class="current"{% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
+      {% endfor %} 
     </ul>
 
 ### page_title
