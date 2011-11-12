@@ -123,13 +123,15 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
-    {% if collections != empty %}
-      <ul>
-      {% for _collection in collections %}
-        <li><a href="{{ _collection | path }}">{{ _collection.title }}</a></li>
-      {% endfor %}
-      </ul>
-    {% endif %}
+```ruby
+{% if collections != empty %}
+  <ul>
+  {% for _collection in collections %}
+    <li><a href="{{ _collection | path }}">{{ _collection.title }}</a></li>
+  {% endfor %}
+  </ul>
+{% endif %}
+```
 
 ### Sets
 
@@ -318,4 +320,6 @@ As you see in the example above we supply `685` to the asset tag. This is the si
 
 ### Examples
 
-    {{ item | asset_tag: `w685` }}
+```ruby
+{{ item | asset_tag: `w685` }}
+```
