@@ -123,7 +123,6 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
-{% highlight html %}
 &#123;% if collections != empty %}
   <ul>
   &#123;% for _collection in collections %}
@@ -131,7 +130,6 @@ For example, if you want to create a list of links to all your collections this 
   &#123;% endfor %}
   </ul>
 &#123;% endif %}
-{% endhighlight %}
 
 ### Sets
 
