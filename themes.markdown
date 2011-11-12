@@ -46,7 +46,7 @@ A theme consists of six template files and accompanying assets (stylesheets, jav
 
 ### layout.liquid ### {#layout_template}
 
-The layout template is used to set the framework for the site. This is were you`ll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your `&lt;html&gt;`, `&lt;head&gt;` and `&lt;body&gt;' tags.
+The layout template is used to set the framework for the site. This is were you`ll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your `<html>`, `<head>` and `<body>' tags.
 
 #### Available objects
 
@@ -123,13 +123,13 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
-    {% if collections != empty %}
-      &lt;ul&gt;
-      {% for _collection in collections %}
-        &lt;li&gt;&lt;a href="{{ _collection | path }}"&gt;{{ _collection.title }}&lt;/a&gt;&lt;/li&gt;
-      {% endfor %}
-      &lt;/ul&gt;
-    {% endif %}
+    \{% if collections != empty %}
+      <ul>
+      \{% for _collection in collections %}
+        <li><a href="{{ _collection | path }}">{{ _collection.title }}</a></li>
+      \{% endfor %}
+      </ul>
+    \{% endif %}
 
 ### Sets
 
@@ -143,13 +143,13 @@ You can also retrieve a specific `set` with its `handle` e.g. `sets.main`, where
 
 For example, if you wanted to create a list of links to all your sets this is how you would do it.
 
-<pre>{% if sets != empty %}
-  &lt;ul&gt;
-  {% for _set in sets %}
-    &lt;li&gt;&lt;a href="{{ _set | path }}"&gt;{{ _set.title }}&lt;/a&gt;&lt;/li&gt;
-  {% endfor %}
-  &lt;/ul&gt;
-{% endif %}</pre>
+<pre>\{% if sets != empty %}
+  <ul>
+  \{% for _set in sets %}
+    <li><a href="{{ _set | path }}">{{ _set.title }}</a></li>
+  \{% endfor %}
+  </ul>
+\{% endif %}</pre>
 
 ### Pages
 
@@ -163,13 +163,13 @@ You can also retrieve a specific `page` with its `handle` e.g. `pages.main`, whe
 
 For example, if you wanted to create a list of links to all your pages this is how you would do it.
 
-    {% if pages != empty %}
-      &lt;ul&gt;
-      {% for _page in pages %}
-        &lt;li&gt;&lt;a href="{{ _page | path }}"&gt;{{ _page.title }}&lt;/a&gt;&lt;/li&gt;
-      {% endfor %}
-      &lt;/ul&gt;
-    {% endif %}
+    \{% if pages != empty %}
+      <ul>
+      \{% for _page in pages %}
+        <li><a href="{{ _page | path }}">{{ _page.title }}</a></li>
+      \{% endfor %}
+      </ul>
+    \{% endif %}
 
 ### link_lists ### {#link_lists_object}
 
@@ -188,11 +188,11 @@ Each `link` in an link_list object has:
 
 #### Example
 
-<pre>&lt;ul id="nav"&gt;
-  {% for _link in link_lists.main.links %}
-    &lt;li{% if _link.current %} class="current"{% endif %}&gt;&lt;a href="{{ _link | path }}"&gt;{{ link.title }}&lt;/a&gt;&lt;/li&gt;
-  {% endfor %} 
-&lt;/ul&gt;</pre>
+<pre><ul id="nav">
+  \{% for _link in link_lists.main.links %}
+    <li\{% if _link.current %} class="current"\{% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
+  \{% endfor %} 
+</ul></pre>
 
 ### page_title
 
@@ -238,8 +238,8 @@ These variables are available on the item object:
 * `item.description` <br>Returns a string with the items description.
 * `item.width` <br>Returns an integer with the width of the original.
 * `item.height` <br>Returns an integer with the height of the original.
-* `item.landscape` <br>Returns <span class="caps">TRUE</span> if width &gt; height.
-* `item.portrait` <br>Returns <span class="caps">TRUE</span> if width &lt; height.
+* `item.landscape` <br>Returns <span class="caps">TRUE</span> if width > height.
+* `item.portrait` <br>Returns <span class="caps">TRUE</span> if width < height.
 * `item.next_item` <br>Returns an object with the next item in the set.
 * `item.previous_item` <br>Returns an object with the previous item in the set.
 * `item.set` <br>Returns an object with the set the item belongs.
@@ -271,11 +271,11 @@ The `path` filter is used to get the address for a `collection`, `set`, `item` o
 
 #### Examples
 
-<pre>&lt;a href="{{ collection | path }}"&gt;{{ collection.title }}&lt;/a&gt;</pre>
+<pre><a href="{{ collection | path }}">{{ collection.title }}</a></pre>
 
 This would result in:
 
-<pre>&lt;a href="/collection/the-title"&gt;The Title&lt;/a&gt;</pre>
+<pre><a href="/collection/the-title">The Title</a></pre>
 
 ### path_with_collection
 
@@ -283,11 +283,11 @@ The ` path_with_collection ` filter is used to get the address for a `set` or `i
 
 #### Examples
 
-<pre>&lt;a href="{{ set | path_with_collection: collection }}"&gt;{{ set.title }}&lt;/a&gt;</pre>
+<pre><a href="{{ set | path_with_collection: collection }}">{{ set.title }}</a></pre>
 
 This would result in:
 
-<pre>&lt;a href="/collection/collection-title/set/set-title"&gt;The Title&lt;/a&gt;</pre>
+<pre><a href="/collection/collection-title/set/set-title">The Title</a></pre>
 
 ### asset_tag
 
@@ -299,7 +299,7 @@ The `asset_tag` is used to get the <span class="caps">HTML</span> for an item.
 
 If the item is an image this would result in:
 
-<pre>&lt;img src="/images/YOUR_ACCOUNT_NAME/685/item_filename.jpg?token=RESIZE_TOKEN" alt="Item Title" width="685" height="400"&gt;</pre>
+<pre><img src="/images/YOUR_ACCOUNT_NAME/685/item_filename.jpg?token=RESIZE_TOKEN" alt="Item Title" width="685" height="400"></pre>
 
 
 
