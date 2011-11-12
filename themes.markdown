@@ -31,7 +31,7 @@ This documentation is for creating custom themes in PortfolioDeck. Don't hesitat
 
 ## Introduction ## {#intro}
 
-We use [Liquid](http://www.liquidmarkup.org/) as our templating language. If you ever have designed themes in [Shopify](http://www.shopify.com/?ref=winston) you`ve used it. If you`re new to Liquid, please take a couple of minutes to read through [Liquid for designers](http://wiki.github.com/tobi/liquid/liquid-for-designers). Don`t worry, we`l[wait. Done? Good, let's proceed.
+We use [Liquid](http://www.liquidmarkup.org/) as our templating language. If you ever have designed themes in [Shopify](http://www.shopify.com/?ref=winston) you`ve used it. If you`re new to Liquid, please take a couple of minutes to read through [Liquid for designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers). Don`t worry, we`l[wait. Done? Good, let's proceed.
 
 ## Templates and assets ## {#templates}
 
@@ -124,13 +124,13 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
 ```ruby
-{ % if collections != empty %}
+{{ '%' | prepend:'{' }} if collections != empty %}
   <ul>
-  { % for _collection in collections %}
+  {{ '%' | prepend:'{' }} for _collection in collections %}
     <li><a href="{{ _collection | path }}">{{ _collection.title }}</a></li>
-  { % endfor %}
+  {{ '%' | prepend:'{' }} endfor %}
   </ul>
-{ % endif %}
+{{ '%' | prepend:'{' }} endif %}
 ```
 
 ### Sets
@@ -145,13 +145,13 @@ You can also retrieve a specific `set` with its `handle` e.g. `sets.main`, where
 
 For example, if you wanted to create a list of links to all your sets this is how you would do it.
 
-    {% if sets != empty %}
+    {{ '%' | prepend:'{' }} if sets != empty %}
       <ul>
-      {% for _set in sets %}
+      {{ '%' | prepend:'{' }} for _set in sets %}
         <li><a href="{{ _set | path }}">{{ _set.title }}</a></li>
-      {% endfor %}
+      {{ '%' | prepend:'{' }} endfor %}
       </ul>
-    {% endif %}
+    {{ '%' | prepend:'{' }} endif %}
 
 ### Pages
 
@@ -165,13 +165,13 @@ You can also retrieve a specific `page` with its `handle` e.g. `pages.main`, whe
 
 For example, if you wanted to create a list of links to all your pages this is how you would do it.
 
-    {% if pages != empty %}
+    {{ '%' | prepend:'{' }} if pages != empty %}
       <ul>
-      {% for _page in pages %}
+      {{ '%' | prepend:'{' }} for _page in pages %}
         <li><a href="{{ _page | path }}">{{ _page.title }}</a></li>
-      {% endfor %}
+      {{ '%' | prepend:'{' }} endfor %}
       </ul>
-    {% endif %}
+    {{ '%' | prepend:'{' }} endif %}
 
 ### link_lists ### {#link_lists_object}
 
@@ -191,9 +191,9 @@ Each `link` in an link_list object has:
 #### Example
 
     <ul id="nav">
-      {% for _link in link_lists.main.links %}
-        <li{% if _link.current %} class="current"{% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
-      {% endfor %} 
+      {{ '%' | prepend:'{' }} for _link in link_lists.main.links %}
+        <li{{ '%' | prepend:'{' }} if _link.current %} class="current"{{ '%' | prepend:'{' }} endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
+      {{ '%' | prepend:'{' }} endfor %} 
     </ul>
 
 ### page_title
