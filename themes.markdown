@@ -31,7 +31,7 @@ This documentation is for creating custom themes in PortfolioDeck. Don't hesitat
 
 ## Introduction ## {#intro}
 
-We use [Liquid](http://www.liquidmarkup.org/) as our templating language. If you ever have designed themes in [Shopify](http://www.shopify.com/?ref=winston) you've used it. If you're new to Liquid, please take a couple of minutes to read through [Liquid for designers](http://wiki.github.com/tobi/liquid/liquid-for-designers). Don't worry, we'l[wait. Done? Good, let's proceed.
+We use [Liquid](http://www.liquidmarkup.org/) as our templating language. If you ever have designed themes in [Shopify](http://www.shopify.com/?ref=winston) you`ve used it. If you`re new to Liquid, please take a couple of minutes to read through [Liquid for designers](http://wiki.github.com/tobi/liquid/liquid-for-designers). Don`t worry, we`l[wait. Done? Good, let's proceed.
 
 ## Templates and assets ## {#templates}
 
@@ -46,7 +46,7 @@ A theme consists of six template files and accompanying assets (stylesheets, jav
 
 ### layout.liquid ### {#layout_template}
 
-The layout template is used to set the framework for the site. This is were you'll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your '&lt;html&gt;', '&lt;head&gt;' and '&lt;body&gt;' tags.
+The layout template is used to set the framework for the site. This is were you`ll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your `&lt;html&gt;`, `&lt;head&gt;` and `&lt;body&gt;' tags.
 
 #### Available objects
 
@@ -60,7 +60,7 @@ The index template is your sites front-page.
 
 * [Global objects](#global)
 
-###  ### {#collection_template}collection.liquid
+### collection.liquid ### {#collection_template}
 
 This template renders a collections page. The main purpose of this page would most likely be to show the sets in a collection.
 
@@ -84,7 +84,7 @@ This template renders an item page. An item is an image (soon we we'll also supp
 
 #### Available objects
 
-* [Global objects[global]
+* [Global objects](#global)
 * [Item](#item_object)
 
 ### page.liquid ### {#page_template}
@@ -113,9 +113,9 @@ These objects are available in all template files.
 
 ### Collections
 
-The 'collections' object is available in all templates. It contains a list of all collections in the portfolio.
+The `collections` object is available in all templates. It contains a list of all collections in the portfolio.
 
-You can also retrieve a specific collection with its 'handle' e.g. 'collections.main', where 'main' is the handle, will return the 'collection' with the handle 'main'.
+You can also retrieve a specific collection with its `handle` e.g. `collections.main`, where `main` is the handle, will return the `collection` with the handle `main`.
 
 [Check out the docs for the collection object](#collection_object)
 
@@ -123,19 +123,19 @@ You can also retrieve a specific collection with its 'handle' e.g. 'collections.
 
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
-<pre>{% if collections != empty %}
-  &lt;ul&gt;
-  {% for _collection in collections %}
-    &lt;li&gt;&lt;a href="{{ _collection | path }}"&gt;{{ _collection.title }}&lt;/a&gt;&lt;/li&gt;
-  {% endfor %}
-  &lt;/ul&gt;
-{% endif %}</pre>
+    {% if collections != empty %}
+      &lt;ul&gt;
+      {% for _collection in collections %}
+        &lt;li&gt;&lt;a href="{{ _collection | path }}"&gt;{{ _collection.title }}&lt;/a&gt;&lt;/li&gt;
+      {% endfor %}
+      &lt;/ul&gt;
+    {% endif %}
 
 ### Sets
 
-The 'sets' object is available in all templates. It contains a list of all sets in the portfolio.
+The `sets` object is available in all templates. It contains a list of all sets in the portfolio.
 
-You can also retrieve a specific 'set' with its 'handle' e.g. 'sets.main', where 'main' is the handle, will return the 'set' with the handle 'main'.
+You can also retrieve a specific `set` with its `handle` e.g. `sets.main`, where `main` is the handle, will return the `set` with the handle `main`.
 
 [Check out the docs for the set object](#set_object)
 
@@ -153,9 +153,9 @@ For example, if you wanted to create a list of links to all your sets this is ho
 
 ### Pages
 
-The 'pages' object is available in all templates. It contains a list of all pages in the portfolio.
+The `pages` object is available in all templates. It contains a list of all pages in the portfolio.
 
-You can also retrieve a specific 'page' with its 'handle' e.g. 'pages.main', where 'main' is the handle, will return the 'page' with the handle 'main'.
+You can also retrieve a specific `page` with its `handle` e.g. `pages.main`, where `main` is the handle, will return the `page` with the handle `main`.
 
 [Check out the docs for the page object](#page_object)
 
@@ -173,18 +173,18 @@ For example, if you wanted to create a list of links to all your pages this is h
 
 ### link_lists ### {#link_lists_object}
 
-The 'link_lists' object is a global array of all your link lists. To retrieve a 'link_list' object you need to supply its 'handle'. E.g. 'link_lists.main' where 'main' is the handle, will return the 'link_list' with the handle 'main'.
+The `link_lists` object is a global array of all your link lists. To retrieve a `link_list` object you need to supply its `handle`. E.g. `link_lists.main` where `main` is the handle, will return the `link_list` with the handle `main`.
 
-* 'link_lists.example_handle' <br>Returns the 'link_list' with the handle 'example_handle'.
-* 'link_lists.example_handle.links' <br>Returns an array of 'links'.
-* 'link_lists.example_handle.title' <br>Returns the title of the <code>link_list</[de>.
+* `link_lists.example_handle` <br>Returns the `link_list` with the handle `example_handle`.
+* `link_lists.example_handle.links` <br>Returns an array of `links`.
+* `link_lists.example_handle.title` <br>Returns the title of the <code>link_list</[de>.
 
 ### link ### {#link_object}
 
-Each 'link' in an link_list object has:
+Each `link` in an link_list object has:
 
-* 'link.current' <br>Returns <span class="caps">TRUE</span> if you are on the page where that link points.
-* 'link.title' <br>Returns a string with the links title.
+* `link.current` <br>Returns <span class="caps">TRUE</span> if you are on the page where that link points.
+* `link.title` <br>Returns a string with the links title.
 
 #### Example
 
@@ -196,7 +196,7 @@ Each 'link' in an link_list object has:
 
 ### page_title
 
-Returns a string with the title of the current page. If the current page is a 'set' it returns the 'set.title' and so on for 'page', 'collection' and 'item'[
+Returns a string with the title of the current page. If the current page is a `set` it returns the `set.title` and so on for `page`, `collection` and `item`[
 
 
 
@@ -210,49 +210,49 @@ Returns a string with the title of the current page. If the current page is a 's
 
 ### collection ### {#collection_object}
 
-The current collection is retrieved with 'collection'. It is available in the 'collection.liquid' template. These variables are available on the collection object:
+The current collection is retrieved with `collection`. It is available in the `collection.liquid` template. These variables are available on the collection object:
 
-* 'collection.title' <br>Returns a string with the collections title.
-* 'collection.description' <br>Returns a string with the collections description.
-* 'collection.uri' <br>Returns a string with the <span class="caps">URI</span> for the collection.
-* 'collection.sets' <br>Returns an array with the sets in the collecti[.
+* `collection.title` <br>Returns a string with the collections title.
+* `collection.description` <br>Returns a string with the collections description.
+* `collection.uri` <br>Returns a string with the <span class="caps">URI</span> for the collection.
+* `collection.sets` <br>Returns an array with the sets in the collecti[.
 
 ### set ### {#collection_set}
 
-The current set is retrieved with 'set'. It is available in the 'set.liquid' template.
+The current set is retrieved with `set`. It is available in the `set.liquid` template.
 
 These are the available variables on the set object:
 
-* 'set.title' <br>Returns a string with the sets title.
-* 'set.description' <br>Returns a string with the sets description.
-* 'set.cover' <br>Returns a object with the sets cover image.
-* 'set.items' <br>Returns an array with the items in the se[
+* `set.title` <br>Returns a string with the sets title.
+* `set.description` <br>Returns a string with the sets description.
+* `set.cover` <br>Returns a object with the sets cover image.
+* `set.items` <br>Returns an array with the items in the se[
 
 ### item ### {#item_object}
 
-The current item is retrieved with 'item'. It is available in the 'item.liquid' template.
+The current item is retrieved with `item`. It is available in the `item.liquid` template.
 
 These variables are available on the item object:
 
-* 'item.title' <br>Returns a string with the items title.
-* 'item.description' <br>Returns a string with the items description.
-* 'item.width' <br>Returns an integer with the width of the original.
-* 'item.height' <br>Returns an integer with the height of the original.
-* 'item.landscape' <br>Returns <span class="caps">TRUE</span> if width &gt; height.
-* 'item.portrait' <br>Returns <span class="caps">TRUE</span> if width &lt; height.
-* 'item.next_item' <br>Returns an object with the next item in the set.
-* 'item.previous_item' <br>Returns an object with the previous item in the set.
-* 'item.set' <br>Returns an object with the set the item belongs.
-* 'item.position'<br>Returns an integer with the 'items' position in relation to the other items in the set[
+* `item.title` <br>Returns a string with the items title.
+* `item.description` <br>Returns a string with the items description.
+* `item.width` <br>Returns an integer with the width of the original.
+* `item.height` <br>Returns an integer with the height of the original.
+* `item.landscape` <br>Returns <span class="caps">TRUE</span> if width &gt; height.
+* `item.portrait` <br>Returns <span class="caps">TRUE</span> if width &lt; height.
+* `item.next_item` <br>Returns an object with the next item in the set.
+* `item.previous_item` <br>Returns an object with the previous item in the set.
+* `item.set` <br>Returns an object with the set the item belongs.
+* `item.position`<br>Returns an integer with the `items` position in relation to the other items in the set[
 
 ### page ### {#page_object}
 
-The current page is retrieved with 'page'. It is available in the 'page.liquid'.
+The current page is retrieved with `page`. It is available in the `page.liquid`.
 
 These are the available objects:
 
-* 'page.title' <br>Returns a string with the page title.
-* 'page.body' <br>Returns a string with the pages body content.
+* `page.title` <br>Returns a string with the page title.
+* `page.body` <br>Returns a string with the pages body content.
 
 
 
@@ -261,13 +261,13 @@ These are the available objects:
 
 This is the filters we have set up specifically for PortfolioDeck. Liquid also has its own <a href="http://wiki.github.com/tobi/liquid/liquid-for-designers">standard filters</a>.
 
-* 'path'
-* 'path_with_collection'
-* 'asset_tag'
+* `path`
+* `path_with_collection`
+* `asset_tag`
 
 ### path
 
-The 'path' filter is used to get the address for a 'collection', 'set', 'item' or 'page'.
+The `path` filter is used to get the address for a `collection`, `set`, `item` or `page`.
 
 #### Examples
 
@@ -279,7 +279,7 @@ This would result in:
 
 ### path_with_collection
 
-The ' path_with_collection ' filter is used to get the address for a 'set' or 'item' with the parent 'collection' added to the address.
+The ` path_with_collection ` filter is used to get the address for a `set` or `item` with the parent `collection` added to the address.
 
 #### Examples
 
@@ -291,11 +291,11 @@ This would result in:
 
 ### asset_tag
 
-The 'asset_tag' is used to get the <span class="caps">HTML</span> for an item.
+The `asset_tag` is used to get the <span class="caps">HTML</span> for an item.
 
 #### Examples
 
-<pre>{{ item | asset_tag: '685' }}</pre>
+<pre>{{ item | asset_tag: `685` }}</pre>
 
 If the item is an image this would result in:
 
@@ -307,14 +307,14 @@ If the item is an image this would result in:
 
 ## Image sizes ## {#sizes}
 
-As you see in the example above we supply '685' to the asset tag. This is the size the asset will be displayed in. There are a couple of different ways to get the desired size.
+As you see in the example above we supply `685` to the asset tag. This is the size the asset will be displayed in. There are a couple of different ways to get the desired size.
 
-* '685' <br>Renders the image within a 685px square. If the image is in landscape format it will be 685px wide. An image in portrait format will be 685px high.
-* '685x500' <br>Renders the image within a rectangle with a width of 685px and a height of 500px.
-* 'w685' <br>Renders the image with a width of 685px.
-* 'h685' <br>Renders the image with a height of 685px.
-* 'c200x250' <br>Renders the image cropped to 200px width and 250px height.
+* `685` <br>Renders the image within a 685px square. If the image is in landscape format it will be 685px wide. An image in portrait format will be 685px high.
+* `685x500` <br>Renders the image within a rectangle with a width of 685px and a height of 500px.
+* `w685` <br>Renders the image with a width of 685px.
+* `h685` <br>Renders the image with a height of 685px.
+* `c200x250` <br>Renders the image cropped to 200px width and 250px height.
 
 ### Examples
 
-    {{ item | asset_tag: 'w685' }}
+    {{ item | asset_tag: `w685` }}
