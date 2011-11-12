@@ -123,13 +123,13 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
-    &#123;% if collections != empty %}
+    \{% if collections != empty %}
       <ul>
-      &#123;% for _collection in collections %}
+      \{% for _collection in collections %}
         <li><a href="{{ _collection | path }}">{{ _collection.title }}</a></li>
-      &#123;% endfor %}
+      \{% endfor %}
       </ul>
-    &#123;% endif %}
+    \{% endif %}
 
 ### Sets
 
@@ -143,13 +143,13 @@ You can also retrieve a specific `set` with its `handle` e.g. `sets.main`, where
 
 For example, if you wanted to create a list of links to all your sets this is how you would do it.
 
-    &#123;% if sets != empty %}
+    \{% if sets != empty %}
       <ul>
-      &#123;% for _set in sets %}
+      \{% for _set in sets %}
         <li><a href="{{ _set | path }}">{{ _set.title }}</a></li>
-      &#123;% endfor %}
+      \{% endfor %}
       </ul>
-    &#123;% endif %}
+    \{% endif %}
 
 ### Pages
 
@@ -163,13 +163,13 @@ You can also retrieve a specific `page` with its `handle` e.g. `pages.main`, whe
 
 For example, if you wanted to create a list of links to all your pages this is how you would do it.
 
-    &#123;% if pages != empty %}
+    \{% if pages != empty %}
       <ul>
-      &#123;% for _page in pages %}
+      \{% for _page in pages %}
         <li><a href="{{ _page | path }}">{{ _page.title }}</a></li>
-      &#123;% endfor %}
+      \{% endfor %}
       </ul>
-    &#123;% endif %}
+    \{% endif %}
 
 ### link_lists ### {#link_lists_object}
 
@@ -177,7 +177,7 @@ The `link_lists` object is a global array of all your link lists. To retrieve a 
 
 * `link_lists.example_handle` <br>Returns the `link_list` with the handle `example_handle`.
 * `link_lists.example_handle.links` <br>Returns an array of `links`.
-* `link_lists.example_handle.title` <br>Returns the title of the <code>link_list</[de>.
+* `link_lists.example_handle.title` <br>Returns the title of the `link_list`.
 
 ### link ### {#link_object}
 
@@ -189,9 +189,9 @@ Each `link` in an link_list object has:
 #### Example
 
     <ul id="nav">
-      &#123;% for _link in link_lists.main.links %}
-        <li&#123;% if _link.current %} class="current"&#123;% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
-      &#123;% endfor %} 
+      \{% for _link in link_lists.main.links %}
+        <li\{% if _link.current %} class="current"\{% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
+      \{% endfor %} 
     </ul>
 
 ### page_title
