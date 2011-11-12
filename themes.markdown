@@ -19,7 +19,7 @@ This documentation is for creating custom themes in PortfolioDeck. Don't hesitat
 
 * [Introduction][intro]
 * [Templates and assets][templates]
-* [Global objects[global]
+* [Global objects][global]
 * [Template specific objects][template_objects]
 * [Filters][filters]
 * [Image sizes][sizes]
@@ -67,15 +67,16 @@ This template renders a collections page. The main purpose of this page would mo
 #### Available objects
 
 * [Global objects][global]
-* [collection][collection_object]
+* [Collection][collection_object]
 
 [set_template]: ### set.liquid
 
 This template renders a set page. On this page you can, for example, show the first item in the set or an overview of all items in the set.
 
-#### Available object[
-* [Global objec[][global]
-* [[t][set_object]
+#### Available objects
+
+* [Global objects][global]
+* [Set][set_object]
 
 [item_template]: ### item.liquid
 
@@ -84,7 +85,7 @@ This template renders an item page. An item is an image (soon we we'll also supp
 #### Available objects
 
 * [Global objects[global]
-* [item][item_object]
+* [Item][item_object]
 
 [page_template]: ### page.liquid
 
@@ -93,7 +94,7 @@ The template renders one of your static pages.
 #### Available objects
 
 * [Global objects][global]
-* [page][page_object]
+* [Page][page_object]
 
 
 
