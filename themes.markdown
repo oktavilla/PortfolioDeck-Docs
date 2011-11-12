@@ -46,7 +46,7 @@ A theme consists of six template files and accompanying assets (stylesheets, jav
 
 ### layout.liquid ### {#layout_template}
 
-The layout template is used to set the framework for the site. This is were you`ll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your `<html>`, `<head>` and `<body>' tags.
+The layout template is used to set the framework for the site. This is were you'll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your `<html>`, `<head>` and `<body>' tags.
 
 #### Available objects
 
@@ -123,13 +123,13 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
-    {% if collections != empty %}
+    &#123;% if collections != empty %}
       <ul>
-      {% for _collection in collections %}
+      &#123;% for _collection in collections %}
         <li><a href="{{ _collection | path }}">{{ _collection.title }}</a></li>
-      {% endfor %}
+      &#123;% endfor %}
       </ul>
-    {% endif %}
+    &#123;% endif %}
 
 ### Sets
 
@@ -143,13 +143,13 @@ You can also retrieve a specific `set` with its `handle` e.g. `sets.main`, where
 
 For example, if you wanted to create a list of links to all your sets this is how you would do it.
 
-<pre>\{% if sets != empty %}
-  <ul>
-  \{% for _set in sets %}
-    <li><a href="{{ _set | path }}">{{ _set.title }}</a></li>
-  \{% endfor %}
-  </ul>
-\{% endif %}</pre>
+    &#123;% if sets != empty %}
+      <ul>
+      &#123;% for _set in sets %}
+        <li><a href="{{ _set | path }}">{{ _set.title }}</a></li>
+      &#123;% endfor %}
+      </ul>
+    &#123;% endif %}
 
 ### Pages
 
@@ -163,13 +163,13 @@ You can also retrieve a specific `page` with its `handle` e.g. `pages.main`, whe
 
 For example, if you wanted to create a list of links to all your pages this is how you would do it.
 
-    \{% if pages != empty %}
+    &#123;% if pages != empty %}
       <ul>
-      \{% for _page in pages %}
+      &#123;% for _page in pages %}
         <li><a href="{{ _page | path }}">{{ _page.title }}</a></li>
-      \{% endfor %}
+      &#123;% endfor %}
       </ul>
-    \{% endif %}
+    &#123;% endif %}
 
 ### link_lists ### {#link_lists_object}
 
@@ -188,11 +188,11 @@ Each `link` in an link_list object has:
 
 #### Example
 
-<pre><ul id="nav">
-  \{% for _link in link_lists.main.links %}
-    <li\{% if _link.current %} class="current"\{% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
-  \{% endfor %} 
-</ul></pre>
+    <ul id="nav">
+      &#123;% for _link in link_lists.main.links %}
+        <li&#123;% if _link.current %} class="current"&#123;% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
+      &#123;% endfor %} 
+    </ul>
 
 ### page_title
 
@@ -271,11 +271,11 @@ The `path` filter is used to get the address for a `collection`, `set`, `item` o
 
 #### Examples
 
-<pre><a href="{{ collection | path }}">{{ collection.title }}</a></pre>
+    <a href="{{ collection | path }}">{{ collection.title }}</a>
 
 This would result in:
 
-<pre><a href="/collection/the-title">The Title</a></pre>
+    <a href="/collection/the-title">The Title</a>
 
 ### path_with_collection
 
@@ -283,11 +283,11 @@ The ` path_with_collection ` filter is used to get the address for a `set` or `i
 
 #### Examples
 
-<pre><a href="{{ set | path_with_collection: collection }}">{{ set.title }}</a></pre>
+    <a href="{{ set | path_with_collection: collection }}">{{ set.title }}</a>
 
 This would result in:
 
-<pre><a href="/collection/collection-title/set/set-title">The Title</a></pre>
+    <a href="/collection/collection-title/set/set-title">The Title</a>
 
 ### asset_tag
 
@@ -295,11 +295,11 @@ The `asset_tag` is used to get the <span class="caps">HTML</span> for an item.
 
 #### Examples
 
-<pre>{{ item | asset_tag: `685` }}</pre>
+    {{ item | asset_tag: `685` }}
 
 If the item is an image this would result in:
 
-<pre><img src="/images/YOUR_ACCOUNT_NAME/685/item_filename.jpg?token=RESIZE_TOKEN" alt="Item Title" width="685" height="400"></pre>
+    <img src="/images/YOUR_ACCOUNT_NAME/685/item_filename.jpg?token=RESIZE_TOKEN" alt="Item Title" width="685" height="400">
 
 
 
