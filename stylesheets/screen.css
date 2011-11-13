@@ -18,7 +18,7 @@ h2 {
   margin: 40px 0 10px 0;
   font-size: 26px; }
 h3 {
-  margin: 15px 0 5px 0;
+  margin: 20px 0 5px 0;
   font-size: 16px; }
 h4 {
   margin: 10px 0 5px 0;
@@ -31,10 +31,10 @@ p {margin:0 0 10px 0;}
   font-size:1.5em;
   line-height:1.25em; }
 ul {
-  margin:0 0 1em 0;
-  padding:0 0 0 1.5em; }
-li {margin:0 0 5px 0;}
-a {color:#39b9ee;}
+  margin:0 0 10px 0;
+  padding: 0 0 0 1.5em; }
+li {margin: 0 0 5px 0;}
+a {color: #39b9ee;}
 a:link {}
 a:visited {}
 a:hover {text-decoration:none;}
@@ -138,8 +138,8 @@ hr {
 #content {}
 
 .block {
-  border-top:1px solid #eee;
-  padding:36px 40px 36px 40px; }
+  border-top: 1px solid #eee;
+  padding: 46px 50px; }
 
 #example_sites {
   width:832px;

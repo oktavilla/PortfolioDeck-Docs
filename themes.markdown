@@ -31,7 +31,7 @@ This documentation is for creating custom themes in PortfolioDeck. Don't hesitat
 
 ## Introduction ## {#intro}
 
-We use [Liquid](http://www.liquidmarkup.org/) as our templating language. If you ever have designed themes in [Shopify](http://www.shopify.com/?ref=winston) you`ve used it. If you`re new to Liquid, please take a couple of minutes to read through [Liquid for designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers). Don`t worry, we'll wait. Done? Good, let's proceed.
+We use [Liquid](http://www.liquidmarkup.org/) as our templating language. If you ever have designed themes in [Shopify](http://www.shopify.com/?ref=winston) you've used it. If you're new to Liquid, please take a couple of minutes to read through [Liquid for designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers). Don't worry, we'll wait. Done? Good, let's proceed.
 
 ## Templates and assets ## {#templates}
 
