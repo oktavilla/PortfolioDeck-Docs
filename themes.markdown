@@ -11,13 +11,13 @@ title: Themes Documentation
 
 This documentation is for creating custom themes in PortfolioDeck. Don't hesitate to drop us a line if you got any questions or comments. Send an email to <hello@portfoliodeck.com>.
 
+We use [Liquid](http://www.liquidmarkup.org/) as our templating language. If you ever have designed themes in [Shopify](http://www.shopify.com/?ref=winston) you've used it. If you're new to Liquid, please take a couple of minutes to read through [Liquid for designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers). Don't worry, we'll wait. Done? Good, let's proceed.
 
 
 
 
 ## Contents
 
-* [Introduction](#intro)
 * [Templates and assets](#templates)
 * [Global objects](#global)
 * [Template specific objects](#template_objects)
@@ -27,11 +27,6 @@ This documentation is for creating custom themes in PortfolioDeck. Don't hesitat
 
 
 
-
-
-## Introduction ## {#intro}
-
-We use [Liquid](http://www.liquidmarkup.org/) as our templating language. If you ever have designed themes in [Shopify](http://www.shopify.com/?ref=winston) you've used it. If you're new to Liquid, please take a couple of minutes to read through [Liquid for designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers). Don't worry, we'll wait. Done? Good, let's proceed.
 
 ## Templates and assets ## {#templates}
 
@@ -46,7 +41,7 @@ A theme consists of six template files and accompanying assets (stylesheets, jav
 
 ### layout.liquid ### {#layout_template}
 
-The layout template is used to set the framework for the site. This is were you'll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your `<html>`, `<head>` and `<body>' tags.
+The layout template is used to set the framework for the site. This is were you'll place all the elements that should be available on every page of your site. E.g. logo, navigation, footer. It is also in this template that you write your `<html>`, `<head>` and `<body>` tags.
 
 #### Available objects
 
@@ -80,7 +75,7 @@ This template renders a set page. On this page you can, for example, show the fi
 
 ### item.liquid ### {#item_template}
 
-This template renders an item page. An item is an image (soon we we'll also support movies) that you have uploaded and placed in a set. On this page you might want to render the image in your preferred size and display title and description.
+This template renders an item page. An item is an image that you have uploaded and placed in a set. On this page you might want to render the image in your preferred size and display title and description.
 
 #### Available objects
 
@@ -112,11 +107,9 @@ These objects are available in all template files.
 
 ### Collections
 
-The `collections` object is available in all templates. It contains a list of all collections in the portfolio. You can also retrieve a specific collection with its `handle` e.g. `collections.main`, where `main` is the handle, will return the `collection` with the handle `main`. [Check out the docs for the collection object](#collection_object)
+The `collections` object is available in all templates. It contains a list of all collections in the portfolio. You can also retrieve a specific collection with its `handle` e.g. `collections.main`, where `main` is the handle, will return the `collection` with the handle `main`. [Check out the docs for the collection object](#collection_object). 
 
-#### Example
-
-If you want to create a list of links to all your collections this is how you would do it.
+For example, if you want to create a list of links to all your collections:
 
 <div style="display: none;">
 For some stupid reason this is necessary so that Jekyll do not parse the following examples as liquid.
@@ -133,11 +126,9 @@ For some stupid reason this is necessary so that Jekyll do not parse the followi
 
 ### Sets
 
-The `sets` object is available in all templates. It contains a list of all sets in the portfolio. You can also retrieve a specific `set` with its `handle` (e.g. `sets.main`, where `main` is the handle). [Check out the docs for the set object](#set_object)
+The `sets` object is available in all templates. It contains a list of all sets in the portfolio. You can also retrieve a specific `set` with its `handle` (e.g. `sets.main`, where `main` is the handle). [Check out the docs for the set object](#set_object). 
 
-#### Example
-
-If you wanted to create a list of links to all your sets this is how you would do it.
+For example, if you wanted to create a list of links to all your sets:
 
     {% if sets != empty %}
       <ul>
@@ -149,11 +140,9 @@ If you wanted to create a list of links to all your sets this is how you would d
 
 ### Pages
 
-The `pages` object is available in all templates. It contains a list of all pages in the portfolio. You can also retrieve a specific `page` with its `handle` (e.g. `pages.main`, where `main` is the handle). [Check out the docs for the page object](#page_object)
+The `pages` object is available in all templates. It contains a list of all pages in the portfolio. You can also retrieve a specific `page` with its `handle` (e.g. `pages.main`, where `main` is the handle). [Check out the docs for the page object](#page_object). 
 
-#### Example
-
-If you wanted to create a list of links to all your pages this is how you would do it.
+For example, if you wanted to create a list of links to all your pages:
 
     {% if pages != empty %}
       <ul>
@@ -230,9 +219,7 @@ This is the filters we have set up specifically for PortfolioDeck. Liquid also h
 
 ### path
 
-The `path` filter is used to get the address for a `collection`, `set`, `item` or `page`.
-
-#### Examples
+The `path` filter is used to get the address for a `collection`, `set`, `item` or `page`. Example:
 
     <a href="{{ collection | path }}">{{ collection.title }}</a>
     Output:
@@ -240,9 +227,7 @@ The `path` filter is used to get the address for a `collection`, `set`, `item` o
 
 ### path_with_collection
 
-The ` path_with_collection ` filter is used to get the address for a `set` or `item` with the parent `collection` added to the address.
-
-#### Examples
+The ` path_with_collection ` filter is used to get the address for a `set` or `item` with the parent `collection` added to the address. Example:
 
     <a href="{{ set | path_with_collection: collection }}">{{ set.title }}</a>
     Output:
@@ -250,9 +235,7 @@ The ` path_with_collection ` filter is used to get the address for a `set` or `i
 
 ### asset_tag
 
-The `asset_tag` is used to get the <span class="caps">HTML</span> for an item.
-
-#### Examples
+The `asset_tag` is used to get the <span class="caps">HTML</span> for an item. Example:
 
     {{ item | asset_tag: `685` }}
     Output:
