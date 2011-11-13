@@ -152,21 +152,21 @@ For example, if you wanted to create a list of links to all your pages:
       </ul>
     {% endif %}
 
-### page_title
+### Page_title
 
-Returns a string with the title of the current page. If the current page is a `set` it returns the `set.title` and so on for `page`, `collection` and `item`.
+`page_title` returns a string with the title of the current page. If the current page is a `set` it returns the `set.title` and so on for `page`, `collection` and `item`.
 
 
 
 
 ## Template specific objects ## {#template_objects}
 
-* collection
-* set
-* item
-* page
+* `collection`
+* `set`
+* `item`
+* `page`
 
-### collection ### {#collection_object}
+### Collection ### {#collection_object}
 
 The current collection is retrieved with `collection`. It is available in the `collection.liquid` template. These variables are available on the collection object:
 
@@ -175,7 +175,7 @@ The current collection is retrieved with `collection`. It is available in the `c
 * `collection.uri` <br>Returns a string with the <span class="caps">URI</span> for the collection.
 * `collection.sets` <br>Returns an array with the sets in the collecti[.
 
-### set ### {#collection_set}
+### Set ### {#collection_set}
 
 The current set is retrieved with `set`. It is available in the `set.liquid` template. These are the available variables on the set object:
 
@@ -184,7 +184,7 @@ The current set is retrieved with `set`. It is available in the `set.liquid` tem
 * `set.cover` <br>Returns a object with the sets cover image.
 * `set.items` <br>Returns an array with the items in the se[
 
-### item ### {#item_object}
+### Item ### {#item_object}
 
 The current item is retrieved with `item`. It is available in the `item.liquid` template. These variables are available on the item object:
 
@@ -199,7 +199,7 @@ The current item is retrieved with `item`. It is available in the `item.liquid` 
 * `item.set` <br>Returns an object with the set the item belongs.
 * `item.position`<br>Returns an integer with the `items` position in relation to the other items in the set[
 
-### page ### {#page_object}
+### Page ### {#page_object}
 
 The current page is retrieved with `page`. It is available in the `page.liquid`. These are the available objects:
 
@@ -217,7 +217,7 @@ This is the filters we have set up specifically for PortfolioDeck. Liquid also h
 * `path_with_collection`
 * `asset_tag`
 
-### path
+### Path
 
 The `path` filter is used to get the address for a `collection`, `set`, `item` or `page`. Example:
 
@@ -225,7 +225,7 @@ The `path` filter is used to get the address for a `collection`, `set`, `item` o
     Output:
     <a href="/collection/the-title">The Title</a>
 
-### path_with_collection
+### Path_with_collection
 
 The ` path_with_collection ` filter is used to get the address for a `set` or `item` with the parent `collection` added to the address. Example:
 
@@ -233,7 +233,7 @@ The ` path_with_collection ` filter is used to get the address for a `set` or `i
     Output:
     <a href="/collection/collection-title/set/set-title">The Title</a>
 
-### asset_tag
+### Asset_tag
 
 The `asset_tag` is used to get the <span class="caps">HTML</span> for an item. Example:
 
