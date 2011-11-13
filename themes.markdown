@@ -235,9 +235,7 @@ The `path` filter is used to get the address for a `collection`, `set`, `item` o
 #### Examples
 
     <a href="{{ collection | path }}">{{ collection.title }}</a>
-
-This would result in:
-
+    Output:
     <a href="/collection/the-title">The Title</a>
 
 ### path_with_collection
@@ -247,9 +245,7 @@ The ` path_with_collection ` filter is used to get the address for a `set` or `i
 #### Examples
 
     <a href="{{ set | path_with_collection: collection }}">{{ set.title }}</a>
-
-This would result in:
-
+    Output:
     <a href="/collection/collection-title/set/set-title">The Title</a>
 
 ### asset_tag
@@ -259,9 +255,7 @@ The `asset_tag` is used to get the <span class="caps">HTML</span> for an item.
 #### Examples
 
     {{ item | asset_tag: `685` }}
-
-If the item is an image this would result in:
-
+    Output:
     <img src="/images/YOUR_ACCOUNT_NAME/685/item_filename.jpg?token=RESIZE_TOKEN" alt="Item Title" width="685" height="400">
 
 
