@@ -9,7 +9,7 @@ title: Themes Documentation
 
 # Themes Documentation
 
-This documentation is for creating custom themes in PortfolioDeck. Don't hesitate to drop us a line if you got any questions or comments. Send an email to <hello@portfoliode[.com>.
+This documentation is for creating custom themes in PortfolioDeck. Don't hesitate to drop us a line if you got any questions or comments. Send an email to <hello@portfoliodeck.com>.
 
 
 
@@ -123,13 +123,13 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
-    {% if collections != empty %}
-      <ul>
-      {% for _collection in collections %}
-        <li><a href="{{ _collection | path }}">{{ _collection.title }}</a></li>
-      {% endfor %}
-      </ul>
-    {% endif %}
+{{ '{% if collections != empty %}' }}
+  <ul>
+  {% for _collection in collections %}
+    <li><a href="{{ _collection | path }}">{{ _collection.title }}</a></li>
+  {% endfor %}
+  </ul>
+{% endif %}
 
 ### Sets
 
