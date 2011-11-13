@@ -10,31 +10,37 @@
 </head>
 <body>
   <div id="wrap">
-    <div id="header"><div class="inner">
-      <a href="/" id="logo"><img src="graphics/logo.png" width="110" height="87" alt="PortfolioDeck"></a>
-    </div></div>
-    <div id="content"><div class="inner">
-      <div class="block">
-        {{ content }}
-      </div>
+    <div id="header">
+        <div class="inner">
+            <a href="/" id="logo"><img src="graphics/logo.png" width="110" height="87" alt="PortfolioDeck"></a>
+        </div>
     </div>
-    <div id="footer"><div class="inner">
-      <div class="block">
-        <p>
-          <strong>Got any questions?</strong> Send us an email at <a href="mailto:hello@portfoliodeck.com">hello@portfoliodeck.com</a>.<br> 
-          Or stay in the loop through <a href="http://twitter.com/portfoliodeck">Twitter</a>.
-          </p>
-      </div>
+    <div id="content">
+        <div class="inner">
+            <div class="block">
+                {{ content }}
+            </div>
+        </div>
+        <div id="footer">
+            <div class="inner">
+                <div class="block">
+                    <p>
+                        <strong>Got any questions?</strong> Send us an email at <a href="mailto:hello@portfoliodeck.com">hello@portfoliodeck.com</a>.<br> 
+                        Or stay in the loop through <a href="http://twitter.com/portfoliodeck">Twitter</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-  try {
-  var pageTracker = _gat._getTracker("UA-6940529-1");
-  pageTracker._trackPageview();
-  } catch(err) {}</script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-6940529-1");
+            pageTracker._trackPageview();
+        } catch(err) {}
+    </script>
 </body>
 </html>
