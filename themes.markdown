@@ -106,25 +106,20 @@ The template renders one of your static pages.
 
 These objects are available in all template files.
 
-* collections
-* sets
-* link_lists
-* page_title
+* `collections`
+* `sets`
+* `page_title`
 
 ### Collections
 
-The `collections` object is available in all templates. It contains a list of all collections in the portfolio.
-
-You can also retrieve a specific collection with its `handle` e.g. `collections.main`, where `main` is the handle, will return the `collection` with the handle `main`.
-
-[Check out the docs for the collection object](#collection_object)
+The `collections` object is available in all templates. It contains a list of all collections in the portfolio. You can also retrieve a specific collection with its `handle` e.g. `collections.main`, where `main` is the handle, will return the `collection` with the handle `main`. [Check out the docs for the collection object](#collection_object)
 
 #### Example
 
-For example, if you want to create a list of links to all your collections this is how you would do it.
+If you want to create a list of links to all your collections this is how you would do it.
 
 <div style="display: none;">
-For some stupid reason this is necessary for Jekyll not to parse the following examples as liquid.
+For some stupid reason this is necessary so that Jekyll do not parse the following examples as liquid.
 {{ '{% if collections != empty %}' }}
 </div>
 
@@ -138,15 +133,11 @@ For some stupid reason this is necessary for Jekyll not to parse the following e
 
 ### Sets
 
-The `sets` object is available in all templates. It contains a list of all sets in the portfolio.
-
-You can also retrieve a specific `set` with its `handle` e.g. `sets.main`, where `main` is the handle, will return the `set` with the handle `main`.
-
-[Check out the docs for the set object](#set_object)
+The `sets` object is available in all templates. It contains a list of all sets in the portfolio. You can also retrieve a specific `set` with its `handle` (e.g. `sets.main`, where `main` is the handle). [Check out the docs for the set object](#set_object)
 
 #### Example
 
-For example, if you wanted to create a list of links to all your sets this is how you would do it.
+If you wanted to create a list of links to all your sets this is how you would do it.
 
     {% if sets != empty %}
       <ul>
@@ -158,15 +149,11 @@ For example, if you wanted to create a list of links to all your sets this is ho
 
 ### Pages
 
-The `pages` object is available in all templates. It contains a list of all pages in the portfolio.
-
-You can also retrieve a specific `page` with its `handle` e.g. `pages.main`, where `main` is the handle, will return the `page` with the handle `main`.
-
-[Check out the docs for the page object](#page_object)
+The `pages` object is available in all templates. It contains a list of all pages in the portfolio. You can also retrieve a specific `page` with its `handle` (e.g. `pages.main`, where `main` is the handle). [Check out the docs for the page object](#page_object)
 
 #### Example
 
-For example, if you wanted to create a list of links to all your pages this is how you would do it.
+If you wanted to create a list of links to all your pages this is how you would do it.
 
     {% if pages != empty %}
       <ul>
@@ -176,32 +163,9 @@ For example, if you wanted to create a list of links to all your pages this is h
       </ul>
     {% endif %}
 
-### link_lists ### {#link_lists_object}
-
-The `link_lists` object is a global array of all your link lists. To retrieve a `link_list` object you need to supply its `handle`. E.g. `link_lists.main` where `main` is the handle, will return the `link_list` with the handle `main`.
-
-* `link_lists.example_handle` <br>Returns the `link_list` with the handle `example_handle`.
-* `link_lists.example_handle.links` <br>Returns an array of `links`.
-* `link_lists.example_handle.title` <br>Returns the title of the `link_list`.
-
-### link ### {#link_object}
-
-Each `link` in an link_list object has:
-
-* `link.current` <br>Returns <span class="caps">TRUE</span> if you are on the page where that link points.
-* `link.title` <br>Returns a string with the links title.
-
-#### Example
-
-    <ul id="nav">
-      {% for _link in link_lists.main.links %}
-        <li{% if _link.current %} class="current"{% endif %}><a href="{{ _link | path }}">{{ link.title }}</a></li>
-      {% endfor %} 
-    </ul>
-
 ### page_title
 
-Returns a string with the title of the current page. If the current page is a `set` it returns the `set.title` and so on for `page`, `collection` and `item`[
+Returns a string with the title of the current page. If the current page is a `set` it returns the `set.title` and so on for `page`, `collection` and `item`.
 
 
 
@@ -224,9 +188,7 @@ The current collection is retrieved with `collection`. It is available in the `c
 
 ### set ### {#collection_set}
 
-The current set is retrieved with `set`. It is available in the `set.liquid` template.
-
-These are the available variables on the set object:
+The current set is retrieved with `set`. It is available in the `set.liquid` template. These are the available variables on the set object:
 
 * `set.title` <br>Returns a string with the sets title.
 * `set.description` <br>Returns a string with the sets description.
@@ -235,9 +197,7 @@ These are the available variables on the set object:
 
 ### item ### {#item_object}
 
-The current item is retrieved with `item`. It is available in the `item.liquid` template.
-
-These variables are available on the item object:
+The current item is retrieved with `item`. It is available in the `item.liquid` template. These variables are available on the item object:
 
 * `item.title` <br>Returns a string with the items title.
 * `item.description` <br>Returns a string with the items description.
@@ -252,9 +212,7 @@ These variables are available on the item object:
 
 ### page ### {#page_object}
 
-The current page is retrieved with `page`. It is available in the `page.liquid`.
-
-These are the available objects:
+The current page is retrieved with `page`. It is available in the `page.liquid`. These are the available objects:
 
 * `page.title` <br>Returns a string with the page title.
 * `page.body` <br>Returns a string with the pages body content.
