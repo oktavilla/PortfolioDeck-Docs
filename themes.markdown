@@ -45,7 +45,7 @@ The layout template is used to set the framework for the site. This is were you'
 
 #### Available objects
 
-* [global objects](#global)
+* [Global objects](#global)
 
 ### index.liquid ### {#index_template}
 
