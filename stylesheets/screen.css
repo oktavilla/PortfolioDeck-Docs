@@ -3,7 +3,7 @@
 body { 
   margin:0;
   padding:0;
-  font:normal 16px/1.3em georgia, serif;
+  font:normal 16px/1.4em georgia, serif;
   color:#333;
   background:#ddd url(../graphics/bg.jpg); }
 h1, h2, h3, h4, h5, h6 {
@@ -26,14 +26,14 @@ h4 {
   font-size: 16px; 
   font-weight:normal;
   color:#777; }
-p {margin:0 0 8px 0;}
+p {margin:0 0 10px 0;}
 .preamble {
   font-size:1.5em;
   line-height:1.25em; }
 ul {
   margin:0 0 1em 0;
   padding:0 0 0 1.5em; }
-li {margin:0 0 0 0;}
+li {margin:0 0 5px 0;}
 a {color:#39b9ee;}
 a:link {}
 a:visited {}

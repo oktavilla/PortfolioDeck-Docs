@@ -35,7 +35,7 @@ We use [Liquid](http://www.liquidmarkup.org/) as our templating language. If you
 
 ## Templates and assets ## {#templates}
 
-A theme consists of six template files and accompanying assets (stylesheets, javascripts and graphics). There is a template for each page type. There is also a layout template for the framework of the site (header, navigation and footer). Each page template is rendered inside the [yout template.
+A theme consists of six template files and accompanying assets (stylesheets, javascripts and graphics). There is a template for each page type. There is also a layout template for the framework of the site (header, navigation and footer). Each page template is rendered inside the layout template.
 
 * [layout.liquid](#layout_template)
 * [index.liquid](#index_template)
