@@ -123,7 +123,7 @@ You can also retrieve a specific collection with its `handle` e.g. `collections.
 
 For example, if you want to create a list of links to all your collections this is how you would do it.
 
-{% comment %} Necessary to prevent liquid parsing below {% endcomment %}
+{{ '{% if collections != empty %}' }}
     {% if collections != empty %}
       <ul>
       {% for _collection in collections %}
