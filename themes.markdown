@@ -101,9 +101,31 @@ The template renders one of your static pages.
 
 These objects are available in all template files.
 
+* `portfolio`
+* `contact`
 * `collections`
 * `sets`
 * `page_title`
+
+### Portfolio
+
+* `portfolio.name` <br>Returns a string with the name you choose for your portfolio. To change your portfolio name go to Customize and click ”Edit info”.
+* `portfolio.description` <br>Returns a string with your description/tagline. The description can be changed in the same location as the name.
+* `portfolio.url` <br>Returns the full url to your portfolio.
+
+### Contact
+
+The `contact` object contains all your contact details supplied under Customize / Your Info.
+
+* `contact.email`
+* `contact.phone`
+* `contact.url` <br>Returns the web address supplied under contact details. This is __not__ the same as `portfolio.url`.
+* `contact.address`
+* `contact.post_code`
+* `contact.city`
+* `contact.country`
+* `contact.twitter` <br>Returns an url to your twitter (if supplied).
+* `contact.facebook` <br>Returns an url to your Facebook profile (if supplied).
 
 ### Collections
 
@@ -182,7 +204,7 @@ The current set is retrieved with `set`. It is available in the `set.liquid` tem
 * `set.title` <br>Returns a string with the sets title.
 * `set.description` <br>Returns a string with the sets description.
 * `set.cover` <br>Returns a object with the sets cover image.
-* `set.items` <br>Returns an array with the items in the se[
+* `set.items` <br>Returns an array with the items in the set.
 
 ### Item ### {#item_object}
 
