@@ -8,15 +8,17 @@ body {
   background:#ddd url(../graphics/bg.jpg); }
 h1, h2, h3 {
   color:#000;
-  font-family:"helvetica neue", helvetica, arial, sans-serif; }
+  font-family: "museo-slab", "helvetica neue", helvetica, arial, sans-serif; }
 h1 {
   margin:.2em 0 .5em 0;
   font-size:48px;
   line-height:48px;
+  font-weight: 700;
   letter-spacing:-.05em;}
 h2 {
   padding-top: 40px;
   border-top: 2px solid #eee;
+  font-weight: 300;
   margin: 40px 0 15px 0;
   font-size: 28px; }
 h3 {
