@@ -7,7 +7,7 @@ title: Themes Documentation
 
 
 
-# Themes Documentation
+# <span>Themes</span> Documentation
 
 This documentation is for creating custom themes in PortfolioDeck. Don't hesitate to drop us a line if you got any questions or comments. Send an email to <hello@portfoliodeck.com>.
 

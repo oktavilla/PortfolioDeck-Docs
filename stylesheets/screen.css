@@ -7,14 +7,21 @@ body {
   color:#333;
   background:#ddd url(../graphics/bg.jpg); }
 h1, h2, h3 {
-  color:#000;
+  color:#333;
   font-family: "museo-slab", "helvetica neue", helvetica, arial, sans-serif; }
 h1 {
-  margin:.2em 0 .5em 0;
-  font-size:48px;
-  line-height:48px;
+  margin: 0 0 10px 0;
+  line-height: 1.1;
+  font-size: 50px;
+  text-align: left;
   font-weight: 700;
-  letter-spacing:-.05em;}
+  text-transform: uppercase; }
+h1 span {
+  text-transform: none;
+  display: block;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;}
 h2 {
   padding-top: 40px;
   border-top: 2px solid #eee;
