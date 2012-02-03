@@ -3,10 +3,11 @@ layout: doc
 title: Setting up a custom domain
 ---
 
+# <span>Setting up a</span> custom domain
 
-# <span>Setting up</span> custom domain
+## What you need to know
 
-To set up PortfolioDeck to work with a custom domain you will need:
+To get PortfolioDeck to work with a custom domain you will need:
 
 * A domain name.
 * A DNS service provider.
@@ -14,7 +15,7 @@ To set up PortfolioDeck to work with a custom domain you will need:
 
 ## Domain purchasing and DNS setup
 
-Some For Swedish and European domain names you have [Loopia](http://www.loopia.com/domainnames). For .com and other international domains you can use [DNSimple](https://dnsimple.com/). They both offer domain registration as well as DNS services. There are a bunch of others as well and you may use whoever you prefer. Registring and setting up a domain  can be a bit tricky so if you don't feel comfortable dealing with this kind of stuff we recommend that you ask a friend.
+For .com and other international domains you can use [DNSimple](https://dnsimple.com/). For Swedish domain names you have [Loopia](http://www.loopia.com/domainnames) (you need a Swedish social security number). They both offer domain registration as well as DNS services. There are a bunch of others as well and you may use whoever you prefer. Registring and setting up a domain can be a bit tricky so if you don't feel comfortable dealing with this kind of stuff we recommend that you ask a friend.
 
 ## After setup
 
