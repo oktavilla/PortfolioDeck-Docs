@@ -74,9 +74,10 @@ pre {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  color:#eee; }
+  color:#ddd; }
+pre code {color:#ddd;}
 code {
-  color:#eee; }
+  color:#555; }
 input {padding:.2em;}
 
 #nav {}
