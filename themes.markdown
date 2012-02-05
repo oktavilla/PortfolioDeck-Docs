@@ -257,12 +257,24 @@ The ` path_with_collection ` filter is used to get the address for a `set` or `i
 
 ### Asset_tag
 
-The `asset_tag` is used to get the <span class="caps">HTML</span> for an item. Example:
+The `asset_tag` filter is used to get the <span class="caps">HTML</span> for an item. Example:
 
     {{ item | asset_tag: `685` }}
     Output:
-    <img src="/images/YOUR_ACCOUNT_NAME/685/item_filename.jpg?token=RESIZE_TOKEN" alt="Item Title" width="685" height="400">
+    <img src="http://images.portfoliodeck.com/assets/685/RESIZE_TOKEN/1.jpg" alt="Item Title" width="685" height="400">
 
+
+### Image_url
+
+The `image_url` filter is used get the url for a item. Example
+
+	{{ item | image_url: `w400` }}
+	Output:
+	http://images.portfoliodeck.com/assets/w400/RESIZE_TOKEN/1.jpg
+
+	{{ set.cover | image_url: `80` }}
+	Output:
+	http://images.portfoliodeck.com/assets/80/RESIZE_TOKEN/2.jpg
 
 
 
@@ -279,3 +291,5 @@ As you see in the example above we supply `685` to the asset tag. This is the si
 ### Examples
 
     {{ item | asset_tag: `w685` }}
+
+	{{ item | image_url: `w400` }}
