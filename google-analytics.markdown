@@ -17,7 +17,7 @@ Once you're up and running with Analytics, login and then click the "cog icon" i
 
 ![Getting started](graphics/ga1.png)
 
-1. Click on "New Account" and fill out the details.
+1. Click on "New Account".
 2. Name your account. You can call it whatever you like but why not simply call it PortfolioDeck?
 2. Select 'http://' and fill in the address for your portfolio. It should be something like 'myportfolio.portfoliodeck.com' (or your custom domain if you have [one of those](custom-domain)). 
 3. Select the timezone for where you live.
