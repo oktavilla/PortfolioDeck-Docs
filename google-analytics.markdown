@@ -11,7 +11,7 @@ title: Setting up Google Analytics
 If you don't already have an Analytics account -- sign up for one now [on their homepage](http://www.google.com/analytics/). Look for the "Sign Up Now" link (we don't want to link directly as they keep changing these things). If you don't have a Google account (i.e for mail, reader etc) you may have to create one first (look in the top right corner in the sign up page -- they've hidden it well).
 
 
-## Adding your portfolio to Google Analytics
+## Adding your portfolio
 
 Once you're up and running with Analytics, login and then click the "cog icon" in the top right corner…
 
@@ -29,7 +29,7 @@ You'll be shown a list of your accounts/sites. If you've just signed up it's goi
 ![Creating account](graphics/ga2.png) 
 
 
-## Adding the tracking code to PortfolioDeck
+## Getting the tracking code
 
 If all went well you'll arrive at your new account page. Close to the top of the page you'll find the tracking ID (something like 'UA-28988561-1').
 
