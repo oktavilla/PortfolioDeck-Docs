@@ -34,6 +34,6 @@ If all went well you'll arrive at your new account page. Close to the top of the
 ![Tracking ID](graphics/ga3.png) 
 
 1. Copy the tracking ID code.
-2. Click the "Customize" button in the menu when logged in to the PortfolioDeck admin.
+2. Login to your PortfolioDeck admin and click the "Customize" button in the menu.
 2. Click the “Add a tracking code” button in the Google Analytics box.
 3. Paste the tracking ID code in the ”Tracking code” field and click “Save changes”.
