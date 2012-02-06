@@ -22,7 +22,7 @@ If you don't like either of those there's a bunch of other DNS service providers
 
 1. Go the DNS management page of your DNS service provider and select your domain name. 
 2. Delete any existing A records for your domain's subdomain called ”\*”.
-3. Create two new A-records for the ”\*”-subdomain. One for __95.131.248.79__ and one for __95.131.248.XYZ__, the field where you enter the IP-address is probably called ”value”, ”data” or ”destination”. Your DNS provider might also require that your enter a value for a ”TTL” or ”Time to live” field, you can enter 3600 in this field.
+3. Create two new A-records for the ”\*”-subdomain: One for __95.131.248.79__ and one for __95.131.248.XYZ__ (You'll probably enter this into a field called something like ”value”, ”data” or ”destination”). If you're also required to enter ”Time to live/TTL” -- use 3600 .
 
 
 ## Let PortfolioDeck know about your domain name
