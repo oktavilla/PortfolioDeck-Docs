@@ -12,7 +12,7 @@ Once you're up and running with Analytics, login and then click the "cog icon" i
 
 You'll be shown a list of your accounts/sites. If you've just signed up it's going to be empty. 
 
-![Getting started](/graphics/ga1.png)
+![Getting started](graphics/ga1.png)
 
 1. Click on "New Account" and fill out the details.
 2. Name your account. You can call it whatever you like but why not simply call it PortfolioDeck?
@@ -22,8 +22,8 @@ You'll be shown a list of your accounts/sites. If you've just signed up it's goi
 5. Click "Create account"
 
 
-![Creating account](/graphics/ga2.png) 
+![Creating account](graphics/ga2.png) 
 
 If all went well you'll arrive at your new account page. Close to the top of the page you'll find the tracking ID (something like 'UA-28988561-1'). Copy that into the Google Analytics field under the "Customize" tab on your PortfolioDeck admin page.
 
-![Tracking ID](/graphics/ga3.png) 
+![Tracking ID](graphics/ga3.png) 
