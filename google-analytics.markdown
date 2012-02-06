@@ -35,4 +35,4 @@ If all went well you'll arrive at your new account page. Close to the top of the
 
 ![Tracking ID](graphics/ga3.png) 
 
-Copy that into the Google Analytics field under the "Customize" tab on your PortfolioDeck admin page.
+Copy this code into the Google Analytics field under the "customize" tab on your PortfolioDeck admin page.
