@@ -16,13 +16,13 @@ Registering and setting up a domain can be a bit tricky, if you don't feel comfo
 
 For .com/.net/.org and other international domains we suggest that you use [DNSimple](https://dnsimple.com/). For Swedish domains we suggest that you use [Loopia](http://www.loopia.com/domainnames). They both offer domain registration as well as DNS services. 
 
-There are also a bunch of other DNS service providers and you may use whoever you prefer. 
+If you don't like either of those there's a bunch of other DNS service providers out there and you may use whoever you prefer. 
 
 ## DNS setup
 
 1. Go the DNS management page of your DNS service provider and select your domain name. 
-2. Delete any existing A records for your domain's subdomain called ”*”. 
-3. Create two new A-records for the ”*”-subdomain. One for __95.131.248.79__ and one for __95.131.248.XYZ__, the field where you enter the IP-address is probably called ”value”, ”data” or ”destination”. Your DNS provider might also require that your enter a value for a ”TTL” or ”Time to live” field, you can enter 3600 in this field.
+2. Delete any existing A records for your domain's subdomain called ”\*”.
+3. Create two new A-records for the ”\*”-subdomain. One for __95.131.248.79__ and one for __95.131.248.XYZ__, the field where you enter the IP-address is probably called ”value”, ”data” or ”destination”. Your DNS provider might also require that your enter a value for a ”TTL” or ”Time to live” field, you can enter 3600 in this field.
 
 
 ## Let PortfolioDeck know about your domain name
