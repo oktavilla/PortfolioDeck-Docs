@@ -8,14 +8,12 @@ title: Setting up Google Analytics
 
 ## Creating an account
 
-If you don't already have an Analytics account -- sign up for one now [on their homepage](http://www.google.com/analytics/). Look for the "Sign Up Now" link (we don't want to link directly as they keep changing these things). If you don't have a Google account (i.e for mail, reader etc) you may have to create one first (look in the top right corner in the sign up page -- they've hidden it well).
+If you don't already have an Analytics account -- sign up for one now [on their homepage](http://www.google.com/analytics/). Look for the "Sign Up Now" link (we don't want to link directly as they keep changing these things). If you don't have a Google account (i.e for mail, reader etc) you may have to create one first (look in the top right corner on the sign up page -- they've hidden it well).
 
 
 ## Adding your portfolio
 
-Once you're up and running with Analytics, login and then click the "cog icon" in the top right corner…
-
-You'll be shown a list of your accounts/sites. If you've just signed up it's going to be empty. 
+Once you're up and running with Analytics, login and then click the "cog icon" in the top right corner… You'll be shown a list of your accounts/sites. If you've just signed up it's going to be empty. 
 
 ![Getting started](graphics/ga1.png)
 
