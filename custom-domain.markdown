@@ -5,20 +5,31 @@ title: Setting up a custom domain
 
 # <span>Setting up a</span> custom domain
 
-## What you need to know
+Registering and setting up a domain can be a bit tricky, if you don't feel comfortable dealing with this kind of stuff we recommend that you ask a tech savvy friend or [drop us an e-mail](mailto:support@portfoliodeck.com) and we'll try to help you out.
 
-To get PortfolioDeck to work with a custom domain you will need:
+## What you need
 
 * A domain name.
 * A DNS service provider.
-* A couple of A-records pointing towards *95.131.248.79* and *95.131.248.XYZ*
 
-## Domain purchasing and DNS setup
+## Domain purchasing
 
-For .com and other international domains you can use [DNSimple](https://dnsimple.com/). For Swedish domain names you have [Loopia](http://www.loopia.com/domainnames) (you need a Swedish social security number). They both offer domain registration as well as DNS services. There are a bunch of others as well and you may use whoever you prefer. Registring and setting up a domain can be a bit tricky so if you don't feel comfortable dealing with this kind of stuff we recommend that you ask a friend.
+For .com/.net/.org and other international domains we suggest that you use [DNSimple](https://dnsimple.com/). For Swedish domains we suggest that you use [Loopia](http://www.loopia.com/domainnames). They both offer domain registration as well as DNS services. 
 
-## After setup
+There are also a bunch of other DNS service providers and you may use whoever you prefer. 
 
-It's important that you let PortfolioDeck know about your new domain. If you haven't done so already: click the customize tab on your PortfolioDeck admin page and then select "Add a custom domain name". Enter the domain name you've purchased and click "Save changes".
+## DNS setup
 
-Please note that after you've set up your new domain you may need to wait up to 72 hours for the change to take effect. This is just how DNS works - please be patient :)
+1. Go the DNS management page of your DNS service provider and select your domain name. 
+2. Delete any existing A records for your domain's subdomain called ”*”. 
+3. Create two new A-records for the ”*”-subdomain. One for __95.131.248.79__ and one for __95.131.248.XYZ__, the field where you enter the IP-address is probably called ”value”, ”data” or ”destination”. Your DNS provider might also require that your enter a value for a ”TTL” or ”Time to live” field, you can enter 3600 in this field.
+
+
+## Let PortfolioDeck know about your domain name
+
+1. Click the ”Customize” button in the menu when logged in to the PortfolioDeck admin. 
+2. Click the "Add a custom domain name" button.
+3. Enter your domain name in the ”Custom domain” field and click "Save changes".
+
+
+_Please note that after you've set up your new domain you may need to wait up to 72 hours for the change to take effect. This is just how DNS works - please be patient :)_
