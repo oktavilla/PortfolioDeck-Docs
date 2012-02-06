@@ -38,6 +38,8 @@ h4 {
   font-weight:normal;
   color:#777; }
 p {margin:0 0 10px 0;}
+p img {
+  margin: 20px 0; }
 .preamble {
   font-size:1.5em;
   line-height:1.25em; }
